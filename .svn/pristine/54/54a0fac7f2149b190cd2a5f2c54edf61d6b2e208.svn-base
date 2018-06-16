@@ -1,0 +1,73 @@
+import { Component} from '@angular/core';
+import { IonicPage, NavController, NavParams,Platform, AlertController } from 'ionic-angular';
+
+
+
+@IonicPage()
+@Component({
+  selector: 'page-upload',
+  templateUrl: 'upload.html',
+})
+export class UploadPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform:Platform,public alertCtrl:AlertController) {
+  platform.registerBackButtonAction(() => {
+    let confirm = this.alertCtrl.create({
+      title: 'Croon',
+      message: 'Do you want to exit?',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'OK',
+          handler: () => {
+          platform.exitApp();
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+          
+   });
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad UploadPage');
+  }
+
+
+   musicjson:any = [
+	    { name: 'Jilles', age: 21 },
+	    { name: 'Todd', age: 24 },
+	    { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 }
+	  ];
+
+   
+
+  public queryupload : string = 'new';
+
+  new_to_myupload(e){
+    if (e.direction == 2) {
+      this.queryupload = 'myupload';     
+    }
+  }
+  myupload_to_new(e){
+    if (e.direction == 4) {
+      this.queryupload = 'new';     
+    }
+  }
+
+
+
+}

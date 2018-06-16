@@ -1,0 +1,67 @@
+<ion-header class="bg"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon menuToggle class="ti ti-menu icon_header" ></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <img src="assets/imgs/logo.png" class="images_header">
+      </ion-col>
+      <ion-col col-1>
+        <i class="ti ti-bell icon_header"></i>
+      </ion-col>
+      <ion-col col-1>
+        <i class="ti ti-power-off icon_header" (click)="logout()" ></i>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+	<img src="assets/imgs/music.jpg" class="vote_images">
+
+	<ion-grid>
+	    <ion-row>     
+	      <ion-col col-8>
+	    	<h3 class="vote_title">Jilles</h3>
+			<i class="ti ti-user ionc_color" ></i>&nbsp;<a class="sub_name">Altius</a>&nbsp;<i class="ti ti-star ionc_color"></i>&nbsp;<a class="sub_name">213 Votes</a>&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;<a class="sub_name">Rank 1</a>
+	      </ion-col>
+	      <ion-col col-2>
+	        <i class="ti ti-star vote_icon"></i>vote
+	      </ion-col>
+	      <ion-col col-2>
+	        <i class="ti ti-sharethis-alt  vote_icon"></i>share
+	      </ion-col>
+	    </ion-row>
+    </ion-grid>
+
+    <input type="text" name="command">
+
+	<ion-grid>
+        <ion-row>
+          <ion-col col-2>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-10>
+              <a class="name">I Like this song</a><br><a class="sub_name">Altius</a>&nbsp;&nbsp;<a class="sub_name">1 min ago</a>
+          </ion-col>         
+        </ion-row>
+        <ion-row>
+          <ion-col col-2>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-10>
+              <a class="name">I Like this song</a><br><a class="sub_name">Altius</a>&nbsp;&nbsp;<a class="sub_name">1 min ago</a>
+          </ion-col>         
+        </ion-row>
+        <ion-row>
+          <ion-col col-2>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-10>
+              <a class="name">I Like this song</a><br><a class="sub_name">Altius</a>&nbsp;&nbsp;<a class="sub_name">1 min ago</a>
+          </ion-col>         
+        </ion-row>
+    </ion-grid> 
+
+  
+</ion-content>

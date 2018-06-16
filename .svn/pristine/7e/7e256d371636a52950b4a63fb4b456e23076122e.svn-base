@@ -1,0 +1,60 @@
+import { Component, ViewChild} from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
+
+import { LoginPage } from './../login/login';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-upload',
+  templateUrl: 'upload.html',
+})
+export class UploadPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad UploadPage');
+  }
+
+  new:any=true;
+
+   musicjson:any = [
+	    { name: 'Jilles', age: 21 },
+	    { name: 'Todd', age: 24 },
+	    { name: 'Lisa', age: 18 }
+	  ];
+
+    logout(){ 
+      this.navCtrl.setRoot(LoginPage);
+    }
+
+    @ViewChild(Slides) slides: Slides;
+  public query : string = 'slide1';
+
+
+  showdata(){
+    if(this.query == 'slide1')
+    {
+      this.slides.slideTo(0,0);
+    }
+    if(this.query == 'slide2')
+    {      
+      this.slides.slideTo(1,0);
+    }
+   
+  }
+  // showdata() function ends here !!!
+
+  slideChanged(){
+      if(this.slides._activeIndex == 0){
+          this.query = 'slide1';
+      }
+      if(this.slides._activeIndex == 1){
+          this.query = 'slide2';
+      }      
+  }
+
+}

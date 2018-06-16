@@ -1,0 +1,131 @@
+import { Component, Input, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+
+/*import { ViewPage } from './../view/view';*/
+
+@IonicPage()
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+   
+   @ViewChild('input') myInput ;
+   
+   public queryhome : string = 'music';
+
+   public unregisterBackButtonAction: any;
+   
+   musicjson:any = [
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 }
+  ];
+
+  isAvailable: Boolean = false;
+  confirm:any;
+  toggled: Boolean = false;
+  someValue:any;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform:Platform,public alertCtrl:AlertController) {
+   platform.registerBackButtonAction(() => {
+    /*if(!this.isAvailable){ //checking if it is false then dismiss() the no internet alert
+      this.isAvailable =true;*/
+       this.confirm = this.alertCtrl.create({
+         title: 'Croon',
+         message: 'Do you want to exit?',
+         buttons: [
+           {
+             text: 'Cancel',
+             handler: () => {
+               console.log('Disagree clicked');
+             }
+           },
+           {
+             text: 'OK',
+             handler: () => {
+             platform.exitApp();
+               console.log('Agree clicked');
+             }
+           }
+         ]
+       });
+       this.confirm.present();
+        
+      /*}else{
+       this.confirm.dismiss();
+      } */     
+   });
+  }
+  
+  ionViewDidLoad() {
+    this.initializeBackButtonCustomHandler();
+  }
+ 
+  ionViewWillLeave() {
+      // Unregister the custom back button action for this page
+      this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+  }
+ 
+  initializeBackButtonCustomHandler(): void {
+      this.unregisterBackButtonAction = this.platform.registerBackButtonAction(function(event){
+          console.log('Prevent Back Button Page Change');
+      }, 101); // Priority 101 will override back button handling (we set in app.component.ts) as it is bigger then priority 100 configured in app.component.ts file */
+  }
+
+	view(){
+		this.navCtrl.setRoot('ViewPage');
+    localStorage.setItem("previous", this.navCtrl.last().name)
+	}
+
+
+	music_to_sports(e){
+	   if (e.direction == 2) {
+	    this.queryhome = 'sports';     
+	  }
+	}
+
+	sports_to_dance(e){
+	  if (e.direction == 2) {
+	    this.queryhome = 'dance';
+	  }
+	  if (e.direction == 4) {
+	    this.queryhome = 'music';
+	  }
+	}
+
+	dance_to_sports(e){
+	  if (e.direction == 4) {
+	    this.queryhome = 'sports';
+	  }
+	}
+   
+  searchThis(event){
+  }
+
+  cancelSearch(event){
+   this.toggled = false;
+  }
+
+  clearSearch(event){
+  
+  }
+
+  public toggle(): void {
+     this.toggled = this.toggled ? false : true;
+     setTimeout(() => {
+       this.myInput.setFocus();
+     },150);
+  }  
+
+}
+
+
+
+

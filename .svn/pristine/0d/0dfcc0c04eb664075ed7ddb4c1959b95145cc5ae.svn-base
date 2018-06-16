@@ -1,0 +1,80 @@
+import { Component, Input, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-history',
+  templateUrl: 'history.html',
+})
+export class HistoryPage {
+
+  @ViewChild('input') myInput ;
+  
+  public queryhistory : string = 'music';
+  today:any;
+  
+  musicjson:any = [
+    { name: 'Jilles', age: 21 },
+    { name: 'Todd', age: 24 },
+    { name: 'Lisa', age: 18 },
+    { name: 'Jilles', age: 21 },
+    { name: 'Todd', age: 24 },
+    { name: 'Lisa', age: 18 }
+  ];
+  
+  toggled: Boolean = false;
+  someValue:any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  this.today = new Date().toISOString();
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HistoryPage');
+  }
+
+  music_sports(e){
+     if (e.direction == 2) {
+      this.queryhistory = 'sports';     
+    }
+  }
+
+  sports_dance(e){
+    if (e.direction == 2) {
+      this.queryhistory = 'dance';
+    }
+    if (e.direction == 4) {
+      this.queryhistory = 'music';
+    }
+  }
+
+  dance_sports(e){
+    if (e.direction == 4) {
+      this.queryhistory = 'sports';
+    }
+  }
+
+  searchThis(event){
+  }
+
+  cancelSearch(event){
+   this.toggled = false;
+  }
+
+  clearSearch(event){
+  
+  }
+
+  public toggle(): void {
+     this.toggled = this.toggled ? false : true;
+     setTimeout(() => {
+       this.myInput.setFocus();
+     },150);
+  }
+
+  view(){
+    this.navCtrl.setRoot('ViewPage');
+    localStorage.setItem("previous", this.navCtrl.last().name)
+  }
+}

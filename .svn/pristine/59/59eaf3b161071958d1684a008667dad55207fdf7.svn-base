@@ -1,0 +1,29 @@
+<!--
+  Generated template for the MusicPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Music</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   <div class="row" *ngFor="let user of ss" >
+	 	<div class="col col-30">
+	 		<img src="pineapple.jpg" class="images">
+	 	</div>
+	 	<div class="col col-60">
+	 		{{ user.name }}<br>
+	 		<ion-icon class="ionc_color" name="person"></ion-icon>&nbsp;&nbsp;Altius&nbsp;&nbsp;<ion-icon class="ionc_color" name="star-outline"></ion-icon>&nbsp;&nbsp;213&nbsp;Votes&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;1&nbsp;Rank
+	 	</div>
+	 	<div class="col col-10">
+	 		...
+	 	</div>
+	 </div>
+</ion-content>

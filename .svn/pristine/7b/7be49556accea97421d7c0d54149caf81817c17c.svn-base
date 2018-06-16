@@ -1,0 +1,25 @@
+<ion-content class="ion-content">
+
+  <div class="images_logo">
+    <img src="assets/imgs/logo.png">
+  </div>
+
+  <form class="login-form">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" id="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Confrim Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <br>
+    <button ion-button block (click)="gotologin()">Sign in</button>
+</form>
+</ion-content>

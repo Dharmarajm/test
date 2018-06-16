@@ -1,0 +1,36 @@
+
+<ion-content class="ion-content-profile">
+<ion-header> 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="back_arrow" name="arrow-round-back" (click)="back()"></ion-icon>
+      </ion-col>
+      <ion-col col-4>
+        <h5 class="title_profil">My Profile</h5>
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/imgs/logo.png" class="images_profil">
+      </ion-col>           
+    </ion-row>
+  </ion-grid>
+  </ion-header>
+  <br>
+  <br><br><br><br>
+
+  <div>
+    <img src="assets/imgs/person.jpg" class="images_person">
+  </div>
+  <br><br>
+  <div class="group">
+          <input class="inputMaterial lower" id="email" type="text"  ng-model="user.email" required>
+          <span class="highlight"></span>
+          <div class="label">Name</div>
+  </div>
+  <br>
+  <div class="group1">       
+          <button ion-button block class="button-blue-profile" (click)="dashboard()" > PROCEED
+          </button>
+  </div>
+
+</ion-content>

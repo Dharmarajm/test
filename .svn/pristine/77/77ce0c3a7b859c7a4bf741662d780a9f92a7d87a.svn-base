@@ -1,0 +1,24 @@
+<ion-content class="ion-content-profile">
+	<div>
+		<img src="assets/imgs/logo.png" class="images_logo">
+	</div>
+	<br><br>
+    <div class="group">
+          <input class="inputMaterial lower" id="email" type="text"  ng-model="user.email" required>
+          <span class="highlight"></span>
+          <div class="label">Email-ID</div>
+   </div>   
+    <div class="group">
+          <input class="inputMaterial" id="password" type="text"  ng-model="user.password" required>
+          <span class="highlight"></span>
+          <div class="label">Password</div>
+    </div>
+    <div class="group">
+          <input class="inputMaterial" id="retry" type="text"  ng-model="user.retry" required>
+          <span class="highlight"></span>
+          <div class="label">Re-try</div>
+    </div>
+    <div class="group1">       
+          <button ion-button block class="button-blue-profile" (click)="gotologin()" > NEXT</button>
+    </div>
+</ion-content>

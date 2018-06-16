@@ -1,0 +1,258 @@
+webpackJsonp([8],{
+
+/***/ 238:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 4 modules
+var ionic_angular = __webpack_require__(51);
+
+// EXTERNAL MODULE: ./src/pages/login/login.ts
+var login = __webpack_require__(40);
+
+// CONCATENATED MODULE: ./src/pages/myvotes/myvotes.ts
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var myvotes_MyvotesPage = /** @class */ (function () {
+    function MyvotesPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    MyvotesPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyvotesPage');
+    };
+    MyvotesPage.prototype.logout = function () {
+        this.navCtrl.setRoot(login["a" /* LoginPage */]);
+    };
+    MyvotesPage = __decorate([
+        Object(core["k" /* Component */])({
+            selector: 'page-myvotes',
+            templateUrl: 'myvotes.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["f" /* NavController */], ionic_angular["g" /* NavParams */]])
+    ], MyvotesPage);
+    return MyvotesPage;
+}());
+
+//# sourceMappingURL=myvotes.js.map
+// CONCATENATED MODULE: ./src/pages/myvotes/myvotes.module.ts
+var myvotes_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var myvotes_module_MyvotesPageModule = /** @class */ (function () {
+    function MyvotesPageModule() {
+    }
+    MyvotesPageModule = myvotes_module___decorate([
+        Object(core["D" /* NgModule */])({
+            declarations: [
+                myvotes_MyvotesPage,
+            ],
+            imports: [
+                ionic_angular["d" /* IonicPageModule */].forChild(myvotes_MyvotesPage),
+            ],
+        })
+    ], MyvotesPageModule);
+    return MyvotesPageModule;
+}());
+
+//# sourceMappingURL=myvotes.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(186);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(187);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js + 1 modules
+var loading_component_ngfactory = __webpack_require__(188);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(189);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(190);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(191);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js + 1 modules
+var select_popover_component_ngfactory = __webpack_require__(192);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(193);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-header.js
+var toolbar_header = __webpack_require__(112);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/grid.js
+var grid = __webpack_require__(115);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/row.js
+var row = __webpack_require__(114);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/grid/col.js
+var col = __webpack_require__(113);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/menu/menu-toggle.js
+var menu_toggle = __webpack_require__(116);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/menu-controller.js
+var menu_controller = __webpack_require__(24);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/button/button.js
+var button_button = __webpack_require__(19);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/navbar.js
+var navbar = __webpack_require__(41);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar-item.js
+var toolbar_item = __webpack_require__(117);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toolbar/toolbar.js
+var toolbar = __webpack_require__(52);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.ngfactory.js
+var content_ngfactory = __webpack_require__(194);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/content/content.js
+var content = __webpack_require__(20);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(23);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(9);
+
+// CONCATENATED MODULE: ./src/pages/myvotes/myvotes.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_MyvotesPage = [];
+var RenderType_MyvotesPage = core["_15" /* ɵcrt */]({ encapsulation: 2, styles: styles_MyvotesPage, data: {} });
+
+function View_MyvotesPage_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 38, "ion-header", [["class", "bg"]], null, null, null, null, null)), core["_16" /* ɵdid */](1, 16384, null, 0, toolbar_header["a" /* Header */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */], [2, view_controller["a" /* ViewController */]]], null, null), (_l()(), core["_36" /* ɵted */](-1, null, [" \n  "])), (_l()(), core["_17" /* ɵeld */](3, 0, null, null, 34, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_16" /* ɵdid */](4, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_17" /* ɵeld */](6, 0, null, null, 30, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_16" /* ɵdid */](7, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_17" /* ɵeld */](9, 0, null, null, 8, "ion-col", [["class", "col"], ["col-1", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](10, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](12, 0, null, null, 4, "ion-icon", [["class", "ti ti-menu icon_header"], ["menuToggle", ""], ["role", "img"]], [[2, "hide", null], [8, "hidden", 0]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_29" /* ɵnov */](_v, 14).toggle() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), core["_16" /* ɵdid */](13, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], null, null), core["_16" /* ɵdid */](14, 1064960, null, 0, menu_toggle["a" /* MenuToggle */], [menu_controller["a" /* MenuController */], [2, view_controller["a" /* ViewController */]], [2, button_button["a" /* Button */]], [2, navbar["a" /* Navbar */]]], { menuToggle: [0, "menuToggle"] }, null), core["_16" /* ɵdid */](15, 16384, null, 1, toolbar_item["a" /* ToolbarItem */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */], [2, toolbar["a" /* Toolbar */]], [2, navbar["a" /* Navbar */]]], null, null), core["_34" /* ɵqud */](603979776, 1, { _buttons: 1 }), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_17" /* ɵeld */](19, 0, null, null, 4, "ion-col", [["class", "col"], ["col-9", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](20, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](22, 0, null, null, 0, "img", [["class", "images_header"], ["src", "assets/imgs/logo.png"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_17" /* ɵeld */](25, 0, null, null, 4, "ion-col", [["class", "col"], ["col-1", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](26, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](28, 0, null, null, 0, "i", [["class", "ti ti-bell icon_header"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_17" /* ɵeld */](31, 0, null, null, 4, "ion-col", [["class", "col"], ["col-1", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](32, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](34, 0, null, null, 0, "i", [["class", "ti ti-power-off icon_header"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.logout() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n  "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n"])), (_l()(), core["_17" /* ɵeld */](40, 0, null, null, 120, "ion-content", [], [[2, "statusbar-padding", null], [2, "has-refresher", null]], null, null, content_ngfactory["b" /* View_Content_0 */], content_ngfactory["a" /* RenderType_Content */])), core["_16" /* ɵdid */](41, 4374528, null, 0, content["a" /* Content */], [config["a" /* Config */], platform["a" /* Platform */], dom_controller["a" /* DomController */], core["p" /* ElementRef */], core["N" /* Renderer */], app["a" /* App */], keyboard["a" /* Keyboard */], core["G" /* NgZone */], [2, view_controller["a" /* ViewController */]], [2, nav_controller["a" /* NavController */]]], null, null), (_l()(), core["_36" /* ɵted */](-1, 1, ["\n\t"])), (_l()(), core["_17" /* ɵeld */](43, 0, null, 1, 0, "img", [["class", "vote_images"], ["src", "assets/imgs/music.jpg"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, 1, ["\n\n\t"])), (_l()(), core["_17" /* ɵeld */](45, 0, null, 1, 41, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_16" /* ɵdid */](46, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t    "])), (_l()(), core["_17" /* ɵeld */](48, 0, null, null, 37, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_16" /* ɵdid */](49, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["     \n\t      "])), (_l()(), core["_17" /* ɵeld */](51, 0, null, null, 21, "ion-col", [["class", "col"], ["col-8", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](52, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t    \t"])), (_l()(), core["_17" /* ɵeld */](54, 0, null, null, 1, "h3", [["class", "vote_title"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Jilles"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t\t\t"])), (_l()(), core["_17" /* ɵeld */](57, 0, null, null, 0, "i", [["class", "ti ti-user ionc_color"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0"])), (_l()(), core["_17" /* ɵeld */](59, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Altius"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0"])), (_l()(), core["_17" /* ɵeld */](62, 0, null, null, 0, "i", [["class", "ti ti-star ionc_color"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0"])), (_l()(), core["_17" /* ɵeld */](64, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["213 Votes"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0"])), (_l()(), core["_17" /* ɵeld */](67, 0, null, null, 1, "ion-icon", [["class", "ionc_color"], ["name", "trophy"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_16" /* ɵdid */](68, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], { name: [0, "name"] }, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0"])), (_l()(), core["_17" /* ɵeld */](70, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Rank 1"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t      "])), (_l()(), core["_17" /* ɵeld */](74, 0, null, null, 4, "ion-col", [["class", "col"], ["col-2", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](75, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t        "])), (_l()(), core["_17" /* ɵeld */](77, 0, null, null, 0, "i", [["class", "ti ti-star vote_icon"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["vote\n\t      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t      "])), (_l()(), core["_17" /* ɵeld */](80, 0, null, null, 4, "ion-col", [["class", "col"], ["col-2", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](81, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t        "])), (_l()(), core["_17" /* ɵeld */](83, 0, null, null, 0, "i", [["class", "ti ti-sharethis-alt  vote_icon"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["share\n\t      "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\t    "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_36" /* ɵted */](-1, 1, ["\n\n\t"])), (_l()(), core["_17" /* ɵeld */](88, 0, null, 1, 71, "ion-grid", [["class", "grid"]], null, null, null, null, null)), core["_16" /* ɵdid */](89, 16384, null, 0, grid["a" /* Grid */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](91, 0, null, null, 21, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_16" /* ɵdid */](92, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](94, 0, null, null, 4, "ion-col", [["class", "col"], ["col-2", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](95, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n             "])), (_l()(), core["_17" /* ɵeld */](97, 0, null, null, 0, "img", [["class", "images"], ["src", "assets/imgs/person.jpg"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](100, 0, null, null, 11, "ion-col", [["class", "col"], ["col-10", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](101, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n              "])), (_l()(), core["_17" /* ɵeld */](103, 0, null, null, 1, "a", [["class", "name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["I Like this song"])), (_l()(), core["_17" /* ɵeld */](105, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), core["_17" /* ɵeld */](106, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Altius"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0\u00A0"])), (_l()(), core["_17" /* ɵeld */](109, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["1 min ago"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["         \n        "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](114, 0, null, null, 21, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_16" /* ɵdid */](115, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](117, 0, null, null, 4, "ion-col", [["class", "col"], ["col-2", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](118, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n             "])), (_l()(), core["_17" /* ɵeld */](120, 0, null, null, 0, "img", [["class", "images"], ["src", "assets/imgs/person.jpg"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](123, 0, null, null, 11, "ion-col", [["class", "col"], ["col-10", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](124, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n              "])), (_l()(), core["_17" /* ɵeld */](126, 0, null, null, 1, "a", [["class", "name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["I Like this song"])), (_l()(), core["_17" /* ɵeld */](128, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), core["_17" /* ɵeld */](129, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Altius"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0\u00A0"])), (_l()(), core["_17" /* ɵeld */](132, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["1 min ago"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["         \n        "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n        "])), (_l()(), core["_17" /* ɵeld */](137, 0, null, null, 21, "ion-row", [["class", "row"]], null, null, null, null, null)), core["_16" /* ɵdid */](138, 16384, null, 0, row["a" /* Row */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](140, 0, null, null, 4, "ion-col", [["class", "col"], ["col-2", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](141, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n             "])), (_l()(), core["_17" /* ɵeld */](143, 0, null, null, 0, "img", [["class", "images"], ["src", "assets/imgs/person.jpg"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_17" /* ɵeld */](146, 0, null, null, 11, "ion-col", [["class", "col"], ["col-10", ""]], null, null, null, null, null)), core["_16" /* ɵdid */](147, 16384, null, 0, col["a" /* Col */], [], null, null), (_l()(), core["_36" /* ɵted */](-1, null, ["\n              "])), (_l()(), core["_17" /* ɵeld */](149, 0, null, null, 1, "a", [["class", "name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["I Like this song"])), (_l()(), core["_17" /* ɵeld */](151, 0, null, null, 0, "br", [], null, null, null, null, null)), (_l()(), core["_17" /* ɵeld */](152, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["Altius"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\u00A0\u00A0"])), (_l()(), core["_17" /* ɵeld */](155, 0, null, null, 1, "a", [["class", "sub_name"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](-1, null, ["1 min ago"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n          "])), (_l()(), core["_36" /* ɵted */](-1, null, ["         \n        "])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n    "])), (_l()(), core["_36" /* ɵted */](-1, 1, [" \n\n  \n"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n"]))], function (_ck, _v) { var currVal_2 = ""; _ck(_v, 14, 0, currVal_2); var currVal_6 = "trophy"; _ck(_v, 68, 0, currVal_6); }, function (_ck, _v) { var currVal_0 = core["_29" /* ɵnov */](_v, 13)._hidden; var currVal_1 = core["_29" /* ɵnov */](_v, 14).isHidden; _ck(_v, 12, 0, currVal_0, currVal_1); var currVal_3 = core["_29" /* ɵnov */](_v, 41).statusbarPadding; var currVal_4 = core["_29" /* ɵnov */](_v, 41)._hasRefresher; _ck(_v, 40, 0, currVal_3, currVal_4); var currVal_5 = core["_29" /* ɵnov */](_v, 68)._hidden; _ck(_v, 67, 0, currVal_5); }); }
+function View_MyvotesPage_Host_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "page-myvotes", [], null, null, null, View_MyvotesPage_0, RenderType_MyvotesPage)), core["_16" /* ɵdid */](1, 49152, null, 0, myvotes_MyvotesPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */]], null, null)], null, null); }
+var MyvotesPageNgFactory = core["_13" /* ɵccf */]("page-myvotes", myvotes_MyvotesPage, View_MyvotesPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=myvotes.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./src/pages/myvotes/myvotes.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyvotesPageModuleNgFactory", function() { return MyvotesPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var MyvotesPageModuleNgFactory = core["_14" /* ɵcmf */](myvotes_module_MyvotesPageModule, [], function (_l) { return core["_25" /* ɵmod */]([core["_26" /* ɵmpd */](512, core["l" /* ComponentFactoryResolver */], core["_10" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], MyvotesPageNgFactory]], [3, core["l" /* ComponentFactoryResolver */]], core["E" /* NgModuleRef */]]), core["_26" /* ɵmpd */](4608, common["k" /* NgLocalization */], common["j" /* NgLocaleLocalization */], [core["C" /* LOCALE_ID */], [2, common["s" /* ɵa */]]]), core["_26" /* ɵmpd */](4608, esm5_forms["o" /* ɵi */], esm5_forms["o" /* ɵi */], []), core["_26" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_26" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_26" /* ɵmpd */](512, esm5_forms["m" /* ɵba */], esm5_forms["m" /* ɵba */], []), core["_26" /* ɵmpd */](512, esm5_forms["e" /* FormsModule */], esm5_forms["e" /* FormsModule */], []), core["_26" /* ɵmpd */](512, esm5_forms["l" /* ReactiveFormsModule */], esm5_forms["l" /* ReactiveFormsModule */], []), core["_26" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_26" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_26" /* ɵmpd */](512, myvotes_module_MyvotesPageModule, myvotes_module_MyvotesPageModule, []), core["_26" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], myvotes_MyvotesPage, [])]); });
+
+//# sourceMappingURL=myvotes.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=8.js.map

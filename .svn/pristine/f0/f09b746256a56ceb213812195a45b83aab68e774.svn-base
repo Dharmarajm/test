@@ -1,0 +1,59 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform} from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
+@IonicPage()
+@Component({
+  selector: 'page-view',
+  templateUrl: 'view.html',
+})
+export class ViewPage {
+  
+  visible:any = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform:Platform, private socialSharing: SocialSharing) {
+
+   platform.registerBackButtonAction(() => {
+   
+         this.navCtrl.setRoot('HomePage');
+
+   });
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ViewPage');
+  }
+  
+  musicjson:any = [
+      { name: 'Jilles', age: 21 },
+      { name: 'Lisa', age: 18 }
+    ];
+
+  back(){
+    
+    if(localStorage.getItem("previous") == "MyvotesPage")
+          this.navCtrl.setRoot('MyvotesPage');
+    else if(localStorage.getItem("previous") == "HomePage")
+          this.navCtrl.setRoot('HomePage');
+    else if(localStorage.getItem("previous") == "UploadPage")
+          this.navCtrl.setRoot('UploadPage');
+    else if(localStorage.getItem("previous") == "HistoryPage")
+          this.navCtrl.setRoot('HistoryPage');
+    
+  }
+
+  compilemsg(index):string{
+      //var msg = this.quotes[index].content + "-" + this.quotes[index].title ;
+      var msg = "Hi i am Crooner";
+      return msg.concat(" \n Sent from Croon App !");
+  }
+
+  regularShare(index){
+    var msg = this.compilemsg(index);
+    this.socialSharing.share(msg, null, null, null);
+  }
+
+  starClick(){
+    this.visible = this.visible ? false : true;
+  }
+}

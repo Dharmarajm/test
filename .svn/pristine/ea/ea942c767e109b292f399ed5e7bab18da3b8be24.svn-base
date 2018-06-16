@@ -1,0 +1,55 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams,Platform, AlertController } from 'ionic-angular';
+
+
+
+@IonicPage()
+@Component({
+  selector: 'page-login',
+  templateUrl: 'login.html',
+})
+export class LoginPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform:Platform,public alertCtrl:AlertController) {
+   platform.registerBackButtonAction(() => {
+    let confirm = this.alertCtrl.create({
+      title: 'Croon',
+      message: 'Do you want to exit?',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'OK',
+          handler: () => {
+          platform.exitApp();
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+          
+   }); 
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad LoginPage');
+    
+  }
+  
+  doLogin() {
+    this.navCtrl.setRoot('ProfilePage');
+  }
+  signup(){
+    this.navCtrl.setRoot('SignupPage');
+  }
+  forgotpassword(){
+    this.navCtrl.setRoot('ForgotpasswordPage');
+  }
+
+}
+

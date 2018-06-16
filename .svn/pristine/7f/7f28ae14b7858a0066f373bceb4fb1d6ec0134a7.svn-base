@@ -1,0 +1,91 @@
+webpackJsonp([7],{
+
+/***/ 273:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(284);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var HomePageModule = /** @class */ (function () {
+    function HomePageModule() {
+    }
+    HomePageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */]),
+            ],
+        })
+    ], HomePageModule);
+    return HomePageModule;
+}());
+
+//# sourceMappingURL=home.module.js.map
+
+/***/ }),
+
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(50);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var HomePage = /** @class */ (function () {
+    function HomePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.musicjson = [
+            { name: 'Jilles', age: 21 },
+            { name: 'Todd', age: 24 },
+            { name: 'Lisa', age: 18 }
+        ];
+        this.music = true;
+    }
+    HomePage.prototype.ionViewDidLoad = function () {
+    };
+    HomePage.prototype.logout = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    HomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-home',template:/*ion-inline-start:"/home/it/HSENGIV/CROON-ANDROID/src/pages/home/home.html"*/'<ion-header class="bg"> \n  <ion-grid>\n    <ion-row>\n      <ion-col col-1>\n        <ion-icon menuToggle class="ti ti-menu icon_header" ></ion-icon>\n      </ion-col>\n      <ion-col col-9>\n        <img src="assets/imgs/logo.png" class="images_header">\n      </ion-col>\n      <ion-col col-1>\n        <i class="ti ti-bell icon_header"></i>\n      </ion-col>\n      <ion-col col-1>\n        <i class="ti ti-power-off icon_header" (click)="logout()" ></i>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-header>\n<ion-content>\n\n\n\n	<ion-searchbar></ion-searchbar>\n  \n\n	<div class="row tabs">\n		<button ion-button color="light" class="btn_tab" (click)="music= true;sports= false;dance= false">MUSIC</button>\n		<button ion-button color="light" class="btn_tab" (click)="music= false;sports= true;dance= false">SPORTS</button>\n		<button ion-button color="light" class="btn_tab" (click)="music= false;sports= false;dance= true">DANCE</button>\n	</div>\n\n\n\n	<div *ngIf="music">\n    <ion-grid>\n        <ion-row *ngFor="let user of musicjson">\n          <ion-col>\n             <img src="assets/imgs/person.jpg" class="images">\n          </ion-col>\n          <ion-col col-9 >\n              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>\n          </ion-col>\n          <ion-col>\n             <i class="ti ti-more-alt ionc_color"></i>\n          </ion-col>\n        </ion-row>\n    </ion-grid>		\n	</div>\n\n	<div *ngIf="sports">\n    <ion-grid>\n        <ion-row *ngFor="let user of musicjson">\n          <ion-col>\n             <img src="assets/imgs/person.jpg" class="images">\n          </ion-col>\n          <ion-col col-9 >\n              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>\n          </ion-col>\n          <ion-col>\n             <a class="name"> ...</a>\n          </ion-col>\n        </ion-row>\n    </ion-grid> \n  </div>\n\n	<div *ngIf="dance">\n    <ion-grid>\n        <ion-row *ngFor="let user of musicjson">\n          <ion-col>\n             <img src="assets/imgs/person.jpg" class="images">\n          </ion-col>\n          <ion-col col-9 >\n              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>\n          </ion-col>\n          <ion-col>\n             <a class="name"> ...</a>\n          </ion-col>\n        </ion-row>\n    </ion-grid>   \n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/it/HSENGIV/CROON-ANDROID/src/pages/home/home.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], HomePage);
+    return HomePage;
+}());
+
+//# sourceMappingURL=home.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=7.js.map

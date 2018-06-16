@@ -1,0 +1,46 @@
+page-myvotes {
+	.images_header{
+		width: 20%;
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.bg{
+		background-color:#002b3d;
+	}
+	.icon_header{
+		color: white;
+        font-size: 25px;
+	}
+	.vote_images{
+		width:100%;
+	}
+	.vote_title{
+		font-weight:bold;
+		color:#0c2a41;
+	}
+	.ionc_color{
+		color:#0c2a41;
+	}
+	.sub_name{
+		color:grey;
+	}	
+	.vote_icon{
+		color: #0c2a41;
+        font-size: 25px;
+	}
+	.images{
+		width: 100%;
+	    border-radius:50px;
+	    height:100%;
+	}
+	.sub_name{
+		color:grey;
+		font-size: 13px;
+	}
+	.name{
+		font-weight:bold;
+		color:black;
+	}
+		
+}

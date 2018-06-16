@@ -1,0 +1,28 @@
+<ion-content class="ion-content-profile">
+  <div class="header">
+    <span>
+      <button ion-button icon-only clear (click)="back()">
+       <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <h4>My Profile</h4>
+    </span>
+    <img src="assets/imgs/logo.png" width="100px">
+  </div>
+  <div class="profile-pic">
+    <img src="assets/imgs/person.jpg">
+      <button ion-button icon-only>
+       <ion-icon name="md-create"></ion-icon>
+      </button>
+  </div>
+  <div class="form-proceed">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" id="email"></ion-input>
+    </ion-item>
+    <button ion-button block (click)="dashboard()">
+      PROCEED
+      <ion-icon name="ios-arrow-forward"></ion-icon>
+    </button>
+  </div>
+</ion-content>
+

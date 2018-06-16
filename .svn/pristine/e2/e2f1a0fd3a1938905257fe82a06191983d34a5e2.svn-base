@@ -1,0 +1,42 @@
+page-history {
+	.images_header{
+		width: 20%;
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.bg{
+		background-color:#0c2a41;
+	}
+	.icon_header{
+		color: white;
+        font-size: 25px;
+	}
+	.btn_detalis{
+		background-color: #0c2a41;
+		color: white;
+		border-radius: 5px;
+	}
+	.tabs{
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	}	
+	.btn_detalis:focus, .btn_detalis:hover, .btn_detalis:active,.btn_detalis.activated
+	{
+	  color: #0c2a41;
+	  background-color: #f0960f;
+	  border-radius: 5px;
+	}
+	.ionc_color{
+		color:#0c2a41;
+	}
+	.sub_name{
+		color:grey;
+	}
+	.name{
+		font-weight:bold;
+		color:black;
+	}
+}

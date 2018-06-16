@@ -1,0 +1,82 @@
+<ion-header class="bg"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon menuToggle class="ti ti-menu icon_header" ></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <img src="assets/imgs/logo.png" class="images_header">
+      </ion-col>
+      <ion-col col-1>
+        <i class="ti ti-bell icon_header"></i>
+      </ion-col>
+      <ion-col col-1>
+        <i class="ti ti-power-off icon_header" (click)="logout()" ></i>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+
+
+
+	<ion-searchbar></ion-searchbar>
+  
+
+	<div class="row tabs">
+		<button ion-button color="light" class="btn_tab" (click)="music= true;sports= false;dance= false">MUSIC</button>
+		<button ion-button color="light" class="btn_tab" (click)="music= false;sports= true;dance= false">SPORTS</button>
+		<button ion-button color="light" class="btn_tab" (click)="music= false;sports= false;dance= true">DANCE</button>
+	</div>
+
+
+
+	<div *ngIf="music">
+    <ion-grid>
+        <ion-row *ngFor="let user of musicjson">
+          <ion-col>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-9 >
+              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>
+          </ion-col>
+          <ion-col>
+             <i class="ti ti-more-alt ionc_color"></i>
+          </ion-col>
+        </ion-row>
+    </ion-grid>		
+	</div>
+
+	<div *ngIf="sports">
+    <ion-grid>
+        <ion-row *ngFor="let user of musicjson">
+          <ion-col>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-9 >
+              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>
+          </ion-col>
+          <ion-col>
+             <a class="name"> ...</a>
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+  </div>
+
+	<div *ngIf="dance">
+    <ion-grid>
+        <ion-row *ngFor="let user of musicjson">
+          <ion-col>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-9 >
+              <a class="name">{{user.name}}</a><br><i class="ti ti-user ionc_color"></i>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<i class="ti ti-star ionc_color" name="star"></i>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>
+          </ion-col>
+          <ion-col>
+             <a class="name"> ...</a>
+          </ion-col>
+        </ion-row>
+    </ion-grid>   
+  </div>
+
+</ion-content>

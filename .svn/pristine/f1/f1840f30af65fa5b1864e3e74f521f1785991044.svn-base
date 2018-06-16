@@ -1,0 +1,31 @@
+<ion-menu [content]="content" > 
+  <ion-content>
+    <div class="menu-profile-pic">
+      <img src="assets/imgs/person.jpg">
+      <h4>James Chrishtino</h4>
+    </div>
+    <ion-item-group *ngIf="user_id > 0">
+      <ion-item-divider color="light">Statistics</ion-item-divider>
+      <button ion-item menuClose>
+          <ion-icon name="ios-log-out-outline"></ion-icon>
+          Total Uploads
+          <ion-badge item-end>26</ion-badge>
+      </button>
+      <button ion-item menuClose>
+          <ion-icon name="star"></ion-icon>
+          Total Votes
+          <ion-badge item-end>20</ion-badge>
+      </button>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider color="light">Other</ion-item-divider>
+      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{ p.title }} 
+      </button>
+    </ion-item-group>
+  </ion-content>
+</ion-menu>
+ 
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

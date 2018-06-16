@@ -1,0 +1,37 @@
+import { Component } from '@angular/core';
+import { Platform , App} from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { HockeyApp } from 'ionic-hockeyapp';
+
+
+import { LoginPage } from '../pages/login/login';
+
+@Component({
+  templateUrl: 'app.html'
+})
+export class MyApp {
+  rootPage:any = LoginPage;
+
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, hockeyapp:HockeyApp, app:App) {
+    platform.ready().then(() => {	 
+
+        // The Android ID of the app as provided by the HockeyApp portal. Can be null if for iOS only.
+    let androidAppId = '3f6000180b044597b1f44364fef8b3a0';
+    // The iOS ID of the app as provided by the HockeyApp portal. Can be null if for android only.
+    let iosAppId = 'cdbaa6ede0d94964bb6c443bd2accce3';
+    // Specifies whether you would like crash reports to be automatically sent to the HockeyApp server when the end user restarts the app.
+    let autoSendCrashReports = false;
+    // Specifies whether you would like to display the standard dialog when the app is about to crash. This parameter is only relevant on Android.
+    let ignoreCrashDialog = true;
+ 
+    hockeyapp.start(androidAppId, iosAppId, autoSendCrashReports, ignoreCrashDialog);   
+      /*statusBar.styleDefault();*/
+      statusBar.styleLightContent()
+      statusBar.backgroundColorByHexString('#01222d');
+      splashScreen.hide();
+    });
+
+  }
+}
+

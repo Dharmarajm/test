@@ -1,0 +1,110 @@
+<ion-header class="bg"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon menuToggle class="icon_header" name="menu"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <img src="assets/imgs/logo.png" class="images_header">
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon_header" name="notifications-outline"></ion-icon>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon_header" name="power"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content>
+  <h4 class="upload_title">Upload</h4>
+
+  <div class="row tabs">
+    <button ion-button color="light" class="btn_tab" (click)="new= true;myupload= false;">NEW</button>
+    <button ion-button color="light" class="btn_tab" (click)="new= false;myupload= true;">MY UPLOAD</button>
+  </div>
+
+  <div *ngIf="new">
+    <ion-grid>
+        <ion-row class="tabs">          
+          <ion-col>
+            <ion-icon class="icon_upload" name="mic"></ion-icon>
+          </ion-col>
+          <ion-col>
+              <ion-icon class="icon_upload" name="videocam"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon class="icon_upload" name="folder"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="tabs">          
+          <ion-col>
+            Record
+          </ion-col>
+          <ion-col>
+              Record
+          </ion-col>
+          <ion-col>
+            upload
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <h6 class="sub_content">Genre</h6>
+
+    <ion-grid>
+      <ion-row class="tabs">          
+        <ion-col>
+          <input type="radio" name="Music">Music
+        </ion-col>
+        <ion-col>
+          <input type="radio" name="Sports">Sports
+        </ion-col>
+        <ion-col>
+           <input type="radio" name="Video">Video
+        </ion-col>
+        <ion-col>
+           <input type="radio" name="VideoGame">Video Game
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="groupButton">
+      <button ion-button color="light" ng-click="Languages()" id="languages" class="btn_languages">
+        Select Languages&nbsp;&nbsp;&nbsp;<ion-icon name="arrow-dropright" class="group-icon_right"></ion-icon>
+      </button>
+    </div>
+
+    <h6 class="sub_content">Description</h6>
+    <textarea class="upload_textarea">
+      
+    </textarea>
+      
+
+
+  </div>
+
+  <div *ngIf="myupload">
+      <ion-grid>
+        <ion-row *ngFor="let user of musicjson">
+          <ion-col>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-9 >
+              <a class="name">{{user.name}}</a><br><ion-icon class="ionc_color" name="person"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="star"></ion-icon>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>
+          </ion-col>
+          <ion-col>
+            <br><ion-icon class="vote_icon" name="share"></ion-icon>
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+  </div>
+
+
+
+</ion-content>

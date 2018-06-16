@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<!--     <div class="subheader">
+      <h3>My Votes</h3>
+      <ion-icon name="search"></ion-icon>
+    </div> -->
+      <div class="subheader">
+        <h3 *ngIf="!toggled">My Votes</h3>
+        <ion-icon name="search" *ngIf="!toggled" (click)="toggle()"></ion-icon>
+      </div>
+      <ion-searchbar
+         *ngIf="toggled"
+         [(ngModel)]="someValue"
+         (ionInput)="searchThis($event)"
+         (ionCancel)="cancelSearch($event)"
+         (ionClear) = "clearSearch($event)"
+         [showCancelButton]="true" #input>
+      </ion-searchbar>
+      <ion-list class="user_list">
+        <div class="user_list" *ngFor="let user of musicjson">
+          <button ion-item (click)="view()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/person.jpg">
+            </ion-avatar>
+            <h2>{{user.name}}</h2>
+            <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+          </button>
+          <button ion-button icon-only clear class="btn-action" (click)="regularShare(i)">
+            <ion-icon name="md-share"></ion-icon>
+          </button>
+        </div>
+<!--         <ion-item *ngFor="let user of musicjson">
+          <ion-avatar item-start>
+            <img src="assets/imgs/person.jpg">
+          </ion-avatar>
+          <h2>{{user.name}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+          <button ion-button icon-only (click)="regularShare(i)" clear>
+            <ion-icon name="md-share"></ion-icon>
+          </button>
+        </ion-item> -->
+      </ion-list>
+</ion-content>

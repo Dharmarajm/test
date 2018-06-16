@@ -1,0 +1,13 @@
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { MyvotesPage } from './myvotes';
+
+@NgModule({
+  declarations: [
+    MyvotesPage,
+  ],
+  imports: [
+    IonicPageModule.forChild(MyvotesPage),
+  ],
+})
+export class MyvotesPageModule {}

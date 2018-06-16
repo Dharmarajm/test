@@ -1,0 +1,331 @@
+webpackJsonp([4],{
+
+/***/ 242:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+
+// EXTERNAL MODULE: ./node_modules/@angular/core/esm5/core.js
+var core = __webpack_require__(0);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/index.js + 4 modules
+var ionic_angular = __webpack_require__(51);
+
+// CONCATENATED MODULE: ./src/pages/tabs/tabs.ts
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the TabsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var tabs_TabsPage = /** @class */ (function () {
+    function TabsPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.tab1Root = 'HomePage';
+        this.tab2Root = 'UploadPage';
+        this.tab3Root = 'MyvotesPage';
+        this.tab4Root = 'HistoryPage';
+        this.myIndex = navParams.data.tabIndex || 0;
+    }
+    TabsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TabsPage');
+    };
+    TabsPage = __decorate([
+        Object(core["k" /* Component */])({
+            selector: 'page-tabs',
+            templateUrl: 'tabs.html',
+        }),
+        __metadata("design:paramtypes", [ionic_angular["f" /* NavController */], ionic_angular["g" /* NavParams */]])
+    ], TabsPage);
+    return TabsPage;
+}());
+
+//# sourceMappingURL=tabs.js.map
+// CONCATENATED MODULE: ./src/pages/tabs/tabs.module.ts
+var tabs_module___decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var tabs_module_TabsPageModule = /** @class */ (function () {
+    function TabsPageModule() {
+    }
+    TabsPageModule = tabs_module___decorate([
+        Object(core["D" /* NgModule */])({
+            declarations: [
+                tabs_TabsPage,
+            ],
+            imports: [
+                ionic_angular["d" /* IonicPageModule */].forChild(tabs_TabsPage),
+            ],
+        })
+    ], TabsPageModule);
+    return TabsPageModule;
+}());
+
+//# sourceMappingURL=tabs.module.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/action-sheet/action-sheet-component.ngfactory.js
+var action_sheet_component_ngfactory = __webpack_require__(185);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/alert/alert-component.ngfactory.js
+var alert_component_ngfactory = __webpack_require__(186);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app-root.ngfactory.js
+var app_root_ngfactory = __webpack_require__(187);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/loading/loading-component.ngfactory.js + 1 modules
+var loading_component_ngfactory = __webpack_require__(188);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/modal/modal-component.ngfactory.js
+var modal_component_ngfactory = __webpack_require__(189);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/picker/picker-component.ngfactory.js + 1 modules
+var picker_component_ngfactory = __webpack_require__(190);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/popover/popover-component.ngfactory.js
+var popover_component_ngfactory = __webpack_require__(191);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/select/select-popover-component.ngfactory.js + 1 modules
+var select_popover_component_ngfactory = __webpack_require__(192);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/toast/toast-component.ngfactory.js
+var toast_component_ngfactory = __webpack_require__(193);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/icon/icon.js
+var icon = __webpack_require__(39);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/config/config.js
+var config = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/badge/badge.js
+var badge = __webpack_require__(124);
+
+// EXTERNAL MODULE: ./node_modules/@angular/common/esm5/common.js
+var common = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-button.js
+var tab_button = __webpack_require__(122);
+
+// CONCATENATED MODULE: ./node_modules/ionic-angular/components/tabs/tab-button.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+var styles_TabButton = [];
+var RenderType_TabButton = core["_15" /* ɵcrt */]({ encapsulation: 2, styles: styles_TabButton, data: {} });
+
+function View_TabButton_1(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "ion-icon", [["class", "tab-button-icon"], ["role", "img"]], [[2, "hide", null]], null, null, null, null)), core["_16" /* ɵdid */](1, 147456, null, 0, icon["a" /* Icon */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], { name: [0, "name"], isActive: [1, "isActive"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.tab.tabIcon; var currVal_2 = _co.tab.isSelected; _ck(_v, 1, 0, currVal_1, currVal_2); }, function (_ck, _v) { var currVal_0 = core["_29" /* ɵnov */](_v, 1)._hidden; _ck(_v, 0, 0, currVal_0); }); }
+function View_TabButton_2(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "span", [["class", "tab-button-text"]], null, null, null, null, null)), (_l()(), core["_36" /* ɵted */](1, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabTitle; _ck(_v, 1, 0, currVal_0); }); }
+function View_TabButton_3(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 2, "ion-badge", [["class", "tab-badge"]], null, null, null, null, null)), core["_16" /* ɵdid */](1, 16384, null, 0, badge["a" /* Badge */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], { color: [0, "color"] }, null), (_l()(), core["_36" /* ɵted */](2, null, ["", ""]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabBadgeStyle; _ck(_v, 1, 0, currVal_0); }, function (_ck, _v) { var _co = _v.component; var currVal_1 = _co.tab.tabBadge; _ck(_v, 2, 0, currVal_1); }); }
+function View_TabButton_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_12" /* ɵand */](16777216, null, null, 1, null, View_TabButton_1)), core["_16" /* ɵdid */](1, 16384, null, 0, common["i" /* NgIf */], [core["_0" /* ViewContainerRef */], core["V" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_12" /* ɵand */](16777216, null, null, 1, null, View_TabButton_2)), core["_16" /* ɵdid */](3, 16384, null, 0, common["i" /* NgIf */], [core["_0" /* ViewContainerRef */], core["V" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_12" /* ɵand */](16777216, null, null, 1, null, View_TabButton_3)), core["_16" /* ɵdid */](5, 16384, null, 0, common["i" /* NgIf */], [core["_0" /* ViewContainerRef */], core["V" /* TemplateRef */]], { ngIf: [0, "ngIf"] }, null), (_l()(), core["_17" /* ɵeld */](6, 0, null, null, 0, "div", [["class", "button-effect"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.tab.tabIcon; _ck(_v, 1, 0, currVal_0); var currVal_1 = _co.tab.tabTitle; _ck(_v, 3, 0, currVal_1); var currVal_2 = _co.tab.tabBadge; _ck(_v, 5, 0, currVal_2); }, null); }
+function View_TabButton_Host_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "div", [["class", "tab-button"]], [[1, "id", 0], [1, "aria-controls", 0], [1, "aria-selected", 0], [2, "has-title", null], [2, "has-icon", null], [2, "has-title-only", null], [2, "icon-only", null], [2, "has-badge", null], [2, "disable-hover", null], [2, "tab-disabled", null], [2, "tab-hidden", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (core["_29" /* ɵnov */](_v, 1).onClick() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, View_TabButton_0, RenderType_TabButton)), core["_16" /* ɵdid */](1, 114688, null, 0, tab_button["a" /* TabButton */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = core["_29" /* ɵnov */](_v, 1).tab._btnId; var currVal_1 = core["_29" /* ɵnov */](_v, 1).tab._tabId; var currVal_2 = core["_29" /* ɵnov */](_v, 1).tab.isSelected; var currVal_3 = core["_29" /* ɵnov */](_v, 1).hasTitle; var currVal_4 = core["_29" /* ɵnov */](_v, 1).hasIcon; var currVal_5 = core["_29" /* ɵnov */](_v, 1).hasTitleOnly; var currVal_6 = core["_29" /* ɵnov */](_v, 1).hasIconOnly; var currVal_7 = core["_29" /* ɵnov */](_v, 1).hasBadge; var currVal_8 = core["_29" /* ɵnov */](_v, 1).disHover; var currVal_9 = !core["_29" /* ɵnov */](_v, 1).tab.enabled; var currVal_10 = !core["_29" /* ɵnov */](_v, 1).tab.show; _ck(_v, 0, 1, [currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10]); }); }
+var TabButtonNgFactory = core["_13" /* ɵccf */](".tab-button", tab_button["a" /* TabButton */], View_TabButton_Host_0, { color: "color", mode: "mode", tab: "tab" }, { ionSelect: "ionSelect" }, []);
+
+//# sourceMappingURL=tab-button.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab-highlight.js
+var tab_highlight = __webpack_require__(74);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/dom-controller.js
+var dom_controller = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/split-pane/split-pane.js
+var split_pane = __webpack_require__(30);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tabs.js
+var tabs = __webpack_require__(72);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-controller.js
+var nav_controller = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/view-controller.js
+var view_controller = __webpack_require__(4);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/app/app.js + 3 modules
+var app = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/platform.js + 1 modules
+var platform = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/deep-linker.js
+var deep_linker = __webpack_require__(12);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/platform/keyboard.js
+var keyboard = __webpack_require__(23);
+
+// CONCATENATED MODULE: ./node_modules/ionic-angular/components/tabs/tabs.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_Tabs = [];
+var RenderType_Tabs = core["_15" /* ɵcrt */]({ encapsulation: 2, styles: styles_Tabs, data: {} });
+
+function View_Tabs_1(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "a", [["class", "tab-button"], ["href", "#"], ["role", "tab"]], [[1, "id", 0], [1, "aria-controls", 0], [1, "aria-selected", 0], [2, "has-title", null], [2, "has-icon", null], [2, "has-title-only", null], [2, "icon-only", null], [2, "has-badge", null], [2, "disable-hover", null], [2, "tab-disabled", null], [2, "tab-hidden", null]], [[null, "ionSelect"], [null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (core["_29" /* ɵnov */](_v, 1).onClick() !== false);
+        ad = (pd_0 && ad);
+    } if (("ionSelect" === en)) {
+        var pd_1 = (_co.select(_v.context.$implicit) !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, View_TabButton_0, RenderType_TabButton)), core["_16" /* ɵdid */](1, 114688, null, 0, tab_button["a" /* TabButton */], [config["a" /* Config */], core["p" /* ElementRef */], core["N" /* Renderer */]], { tab: [0, "tab"] }, { ionSelect: "ionSelect" })], function (_ck, _v) { var currVal_11 = _v.context.$implicit; _ck(_v, 1, 0, currVal_11); }, function (_ck, _v) { var currVal_0 = core["_29" /* ɵnov */](_v, 1).tab._btnId; var currVal_1 = core["_29" /* ɵnov */](_v, 1).tab._tabId; var currVal_2 = core["_29" /* ɵnov */](_v, 1).tab.isSelected; var currVal_3 = core["_29" /* ɵnov */](_v, 1).hasTitle; var currVal_4 = core["_29" /* ɵnov */](_v, 1).hasIcon; var currVal_5 = core["_29" /* ɵnov */](_v, 1).hasTitleOnly; var currVal_6 = core["_29" /* ɵnov */](_v, 1).hasIconOnly; var currVal_7 = core["_29" /* ɵnov */](_v, 1).hasBadge; var currVal_8 = core["_29" /* ɵnov */](_v, 1).disHover; var currVal_9 = !core["_29" /* ɵnov */](_v, 1).tab.enabled; var currVal_10 = !core["_29" /* ɵnov */](_v, 1).tab.show; _ck(_v, 0, 1, [currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6, currVal_7, currVal_8, currVal_9, currVal_10]); }); }
+function View_Tabs_0(_l) { return core["_37" /* ɵvid */](0, [core["_34" /* ɵqud */](402653184, 1, { _highlight: 0 }), core["_34" /* ɵqud */](402653184, 2, { _tabbar: 0 }), core["_34" /* ɵqud */](402653184, 3, { portal: 0 }), (_l()(), core["_17" /* ɵeld */](3, 0, [[2, 0], ["tabbar", 1]], null, 4, "div", [["class", "tabbar"], ["role", "tablist"]], null, null, null, null, null)), (_l()(), core["_12" /* ɵand */](16777216, null, null, 1, null, View_Tabs_1)), core["_16" /* ɵdid */](5, 802816, null, 0, common["h" /* NgForOf */], [core["_0" /* ViewContainerRef */], core["V" /* TemplateRef */], core["A" /* IterableDiffers */]], { ngForOf: [0, "ngForOf"] }, null), (_l()(), core["_17" /* ɵeld */](6, 0, null, null, 1, "div", [["class", "tab-highlight"]], null, null, null, null, null)), core["_16" /* ɵdid */](7, 16384, [[1, 4]], 0, tab_highlight["a" /* TabHighlight */], [core["p" /* ElementRef */], dom_controller["a" /* DomController */]], null, null), core["_28" /* ɵncd */](null, 0), (_l()(), core["_17" /* ɵeld */](9, 16777216, [[3, 3], ["portal", 1]], null, 0, "div", [["tab-portal", ""]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co._tabs; _ck(_v, 5, 0, currVal_0); }, null); }
+function View_Tabs_Host_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 2, "ion-tabs", [], null, null, null, View_Tabs_0, RenderType_Tabs)), core["_32" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [tabs["a" /* Tabs */]]), core["_16" /* ɵdid */](2, 4374528, null, 0, tabs["a" /* Tabs */], [[2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["p" /* ElementRef */], platform["a" /* Platform */], core["N" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], null, null)], null, null); }
+var TabsNgFactory = core["_13" /* ɵccf */]("ion-tabs", tabs["a" /* Tabs */], View_Tabs_Host_0, { color: "color", mode: "mode", name: "name", selectedIndex: "selectedIndex", tabsLayout: "tabsLayout", tabsPlacement: "tabsPlacement", tabsHighlight: "tabsHighlight" }, { ionChange: "ionChange" }, ["*"]);
+
+//# sourceMappingURL=tabs.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/components/tabs/tab.js
+var tab = __webpack_require__(121);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/gestures/gesture-controller.js
+var gesture_controller = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/transitions/transition-controller.js
+var transition_controller = __webpack_require__(25);
+
+// CONCATENATED MODULE: ./node_modules/ionic-angular/components/tabs/tab.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+var styles_Tab = [];
+var RenderType_Tab = core["_15" /* ɵcrt */]({ encapsulation: 2, styles: styles_Tab, data: {} });
+
+function View_Tab_0(_l) { return core["_37" /* ɵvid */](0, [core["_34" /* ɵqud */](402653184, 1, { _vp: 0 }), (_l()(), core["_17" /* ɵeld */](1, 16777216, [[1, 3], ["viewport", 1]], null, 0, "div", [], null, null, null, null, null)), (_l()(), core["_17" /* ɵeld */](2, 0, null, null, 0, "div", [["class", "nav-decor"]], null, null, null, null, null))], null, null); }
+function View_Tab_Host_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "ion-tab", [["role", "tabpanel"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_Tab_0, RenderType_Tab)), core["_16" /* ɵdid */](1, 245760, null, 0, tab["a" /* Tab */], [tabs["a" /* Tabs */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["p" /* ElementRef */], core["G" /* NgZone */], core["N" /* Renderer */], core["l" /* ComponentFactoryResolver */], core["i" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["q" /* ErrorHandler */]], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, function (_ck, _v) { var currVal_0 = core["_29" /* ɵnov */](_v, 1)._tabId; var currVal_1 = core["_29" /* ɵnov */](_v, 1)._btnId; _ck(_v, 0, 0, currVal_0, currVal_1); }); }
+var TabNgFactory = core["_13" /* ɵccf */]("ion-tab", tab["a" /* Tab */], View_Tab_Host_0, { color: "color", mode: "mode", swipeBackEnabled: "swipeBackEnabled", root: "root", rootParams: "rootParams", tabUrlPath: "tabUrlPath", tabTitle: "tabTitle", tabIcon: "tabIcon", tabBadge: "tabBadge", tabBadgeStyle: "tabBadgeStyle", enabled: "enabled", show: "show", tabsHideOnSubPages: "tabsHideOnSubPages" }, { ionSelect: "ionSelect" }, []);
+
+//# sourceMappingURL=tab.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/ionic-angular/navigation/nav-params.js
+var nav_params = __webpack_require__(9);
+
+// CONCATENATED MODULE: ./src/pages/tabs/tabs.ngfactory.js
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var styles_TabsPage = [];
+var RenderType_TabsPage = core["_15" /* ɵcrt */]({ encapsulation: 2, styles: styles_TabsPage, data: {} });
+
+function View_TabsPage_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 15, "ion-tabs", [], null, null, null, View_Tabs_0, RenderType_Tabs)), core["_32" /* ɵprd */](6144, null, split_pane["a" /* RootNode */], null, [tabs["a" /* Tabs */]]), core["_16" /* ɵdid */](2, 4374528, null, 0, tabs["a" /* Tabs */], [[2, nav_controller["a" /* NavController */]], [2, view_controller["a" /* ViewController */]], app["a" /* App */], config["a" /* Config */], core["p" /* ElementRef */], platform["a" /* Platform */], core["N" /* Renderer */], deep_linker["a" /* DeepLinker */], keyboard["a" /* Keyboard */]], { selectedIndex: [0, "selectedIndex"] }, null), (_l()(), core["_36" /* ɵted */](-1, 0, ["\n  "])), (_l()(), core["_17" /* ɵeld */](4, 0, null, 0, 1, "ion-tab", [["role", "tabpanel"], ["tabIcon", "home"], ["tabTitle", "Home"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_Tab_0, RenderType_Tab)), core["_16" /* ɵdid */](5, 245760, null, 0, tab["a" /* Tab */], [tabs["a" /* Tabs */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["p" /* ElementRef */], core["G" /* NgZone */], core["N" /* Renderer */], core["l" /* ComponentFactoryResolver */], core["i" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["q" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), (_l()(), core["_36" /* ɵted */](-1, 0, ["\n  "])), (_l()(), core["_17" /* ɵeld */](7, 0, null, 0, 1, "ion-tab", [["role", "tabpanel"], ["tabIcon", "download"], ["tabTitle", "Upload"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_Tab_0, RenderType_Tab)), core["_16" /* ɵdid */](8, 245760, null, 0, tab["a" /* Tab */], [tabs["a" /* Tabs */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["p" /* ElementRef */], core["G" /* NgZone */], core["N" /* Renderer */], core["l" /* ComponentFactoryResolver */], core["i" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["q" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), (_l()(), core["_36" /* ɵted */](-1, 0, ["\n  "])), (_l()(), core["_17" /* ɵeld */](10, 0, null, 0, 1, "ion-tab", [["role", "tabpanel"], ["tabIcon", "star-outline"], ["tabTitle", "My Votes"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_Tab_0, RenderType_Tab)), core["_16" /* ɵdid */](11, 245760, null, 0, tab["a" /* Tab */], [tabs["a" /* Tabs */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["p" /* ElementRef */], core["G" /* NgZone */], core["N" /* Renderer */], core["l" /* ComponentFactoryResolver */], core["i" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["q" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), (_l()(), core["_36" /* ɵted */](-1, 0, ["\n  "])), (_l()(), core["_17" /* ɵeld */](13, 0, null, 0, 1, "ion-tab", [["role", "tabpanel"], ["tabIcon", "time"], ["tabTitle", "History"]], [[1, "id", 0], [1, "aria-labelledby", 0]], null, null, View_Tab_0, RenderType_Tab)), core["_16" /* ɵdid */](14, 245760, null, 0, tab["a" /* Tab */], [tabs["a" /* Tabs */], app["a" /* App */], config["a" /* Config */], platform["a" /* Platform */], core["p" /* ElementRef */], core["G" /* NgZone */], core["N" /* Renderer */], core["l" /* ComponentFactoryResolver */], core["i" /* ChangeDetectorRef */], gesture_controller["l" /* GestureController */], transition_controller["a" /* TransitionController */], [2, deep_linker["a" /* DeepLinker */]], dom_controller["a" /* DomController */], core["q" /* ErrorHandler */]], { root: [0, "root"], tabTitle: [1, "tabTitle"], tabIcon: [2, "tabIcon"] }, null), (_l()(), core["_36" /* ɵted */](-1, 0, ["\n"])), (_l()(), core["_36" /* ɵted */](-1, null, ["\n\n"]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.myIndex; _ck(_v, 2, 0, currVal_0); var currVal_3 = _co.tab1Root; var currVal_4 = "Home"; var currVal_5 = "home"; _ck(_v, 5, 0, currVal_3, currVal_4, currVal_5); var currVal_8 = _co.tab2Root; var currVal_9 = "Upload"; var currVal_10 = "download"; _ck(_v, 8, 0, currVal_8, currVal_9, currVal_10); var currVal_13 = _co.tab3Root; var currVal_14 = "My Votes"; var currVal_15 = "star-outline"; _ck(_v, 11, 0, currVal_13, currVal_14, currVal_15); var currVal_18 = _co.tab4Root; var currVal_19 = "History"; var currVal_20 = "time"; _ck(_v, 14, 0, currVal_18, currVal_19, currVal_20); }, function (_ck, _v) { var currVal_1 = core["_29" /* ɵnov */](_v, 5)._tabId; var currVal_2 = core["_29" /* ɵnov */](_v, 5)._btnId; _ck(_v, 4, 0, currVal_1, currVal_2); var currVal_6 = core["_29" /* ɵnov */](_v, 8)._tabId; var currVal_7 = core["_29" /* ɵnov */](_v, 8)._btnId; _ck(_v, 7, 0, currVal_6, currVal_7); var currVal_11 = core["_29" /* ɵnov */](_v, 11)._tabId; var currVal_12 = core["_29" /* ɵnov */](_v, 11)._btnId; _ck(_v, 10, 0, currVal_11, currVal_12); var currVal_16 = core["_29" /* ɵnov */](_v, 14)._tabId; var currVal_17 = core["_29" /* ɵnov */](_v, 14)._btnId; _ck(_v, 13, 0, currVal_16, currVal_17); }); }
+function View_TabsPage_Host_0(_l) { return core["_37" /* ɵvid */](0, [(_l()(), core["_17" /* ɵeld */](0, 0, null, null, 1, "page-tabs", [], null, null, null, View_TabsPage_0, RenderType_TabsPage)), core["_16" /* ɵdid */](1, 49152, null, 0, tabs_TabsPage, [nav_controller["a" /* NavController */], nav_params["a" /* NavParams */]], null, null)], null, null); }
+var TabsPageNgFactory = core["_13" /* ɵccf */]("page-tabs", tabs_TabsPage, View_TabsPage_Host_0, {}, {}, []);
+
+//# sourceMappingURL=tabs.ngfactory.js.map
+// EXTERNAL MODULE: ./node_modules/@angular/forms/esm5/forms.js
+var esm5_forms = __webpack_require__(13);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/module.js
+var ionic_angular_module = __webpack_require__(111);
+
+// EXTERNAL MODULE: ./node_modules/ionic-angular/util/module-loader.js
+var module_loader = __webpack_require__(34);
+
+// CONCATENATED MODULE: ./src/pages/tabs/tabs.module.ngfactory.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModuleNgFactory", function() { return TabsPageModuleNgFactory; });
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var TabsPageModuleNgFactory = core["_14" /* ɵcmf */](tabs_module_TabsPageModule, [], function (_l) { return core["_25" /* ɵmod */]([core["_26" /* ɵmpd */](512, core["l" /* ComponentFactoryResolver */], core["_10" /* ɵCodegenComponentFactoryResolver */], [[8, [action_sheet_component_ngfactory["a" /* ActionSheetCmpNgFactory */], alert_component_ngfactory["a" /* AlertCmpNgFactory */], app_root_ngfactory["a" /* IonicAppNgFactory */], loading_component_ngfactory["a" /* LoadingCmpNgFactory */], modal_component_ngfactory["a" /* ModalCmpNgFactory */], picker_component_ngfactory["a" /* PickerCmpNgFactory */], popover_component_ngfactory["a" /* PopoverCmpNgFactory */], select_popover_component_ngfactory["a" /* SelectPopoverNgFactory */], toast_component_ngfactory["a" /* ToastCmpNgFactory */], TabsPageNgFactory]], [3, core["l" /* ComponentFactoryResolver */]], core["E" /* NgModuleRef */]]), core["_26" /* ɵmpd */](4608, common["k" /* NgLocalization */], common["j" /* NgLocaleLocalization */], [core["C" /* LOCALE_ID */], [2, common["s" /* ɵa */]]]), core["_26" /* ɵmpd */](4608, esm5_forms["o" /* ɵi */], esm5_forms["o" /* ɵi */], []), core["_26" /* ɵmpd */](4608, esm5_forms["d" /* FormBuilder */], esm5_forms["d" /* FormBuilder */], []), core["_26" /* ɵmpd */](512, common["b" /* CommonModule */], common["b" /* CommonModule */], []), core["_26" /* ɵmpd */](512, esm5_forms["m" /* ɵba */], esm5_forms["m" /* ɵba */], []), core["_26" /* ɵmpd */](512, esm5_forms["e" /* FormsModule */], esm5_forms["e" /* FormsModule */], []), core["_26" /* ɵmpd */](512, esm5_forms["l" /* ReactiveFormsModule */], esm5_forms["l" /* ReactiveFormsModule */], []), core["_26" /* ɵmpd */](512, ionic_angular_module["a" /* IonicModule */], ionic_angular_module["a" /* IonicModule */], []), core["_26" /* ɵmpd */](512, ionic_angular_module["b" /* IonicPageModule */], ionic_angular_module["b" /* IonicPageModule */], []), core["_26" /* ɵmpd */](512, tabs_module_TabsPageModule, tabs_module_TabsPageModule, []), core["_26" /* ɵmpd */](256, module_loader["a" /* LAZY_LOADED_TOKEN */], tabs_TabsPage, [])]); });
+
+//# sourceMappingURL=tabs.module.ngfactory.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=4.js.map

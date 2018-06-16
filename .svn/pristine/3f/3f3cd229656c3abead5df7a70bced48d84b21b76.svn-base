@@ -1,0 +1,24 @@
+page-tabs {
+	
+    .tab-button-text {
+	    margin-top: 0;
+	    margin-bottom: 1px;
+	    min-height: 11px;
+	    color: white;
+    }    
+    .tab-button{
+    	background-color:#0c2a41;
+    }	  
+    .tab-button:focus, .tab-button:hover, .tab-button:active,.tab-button.activated
+	{
+	  background-color: #1177a7;
+	}
+	.tabs-md .tab-button[aria-selected="true"] .tab-button-icon {
+	    color: #de8818;
+	    -webkit-transform: translate3d(0, -2px, 0);
+	    transform: translate3d(0, -2px, 0);
+    }
+    .tabs-md .tab-button-icon {    
+    	color: #de8818;
+    }
+ }

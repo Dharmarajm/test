@@ -1,0 +1,67 @@
+import { Component, ViewChild} from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
+
+import { LoginPage } from './../login/login';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-history',
+  templateUrl: 'history.html',
+})
+export class HistoryPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HistoryPage');
+  }
+
+  music:any=true;
+
+  musicjson:any = [
+    { name: 'Jilles', age: 21 },
+    { name: 'Todd', age: 24 },
+    { name: 'Lisa', age: 18 }
+  ];
+
+  logout(){ 
+    this.navCtrl.setRoot(LoginPage);
+  }
+
+  @ViewChild(Slides) slides: Slides;
+  public query : string = 'slide1';
+
+
+  showdata(){
+    if(this.query == 'slide1')
+    {
+      this.slides.slideTo(0,0);
+    }
+    if(this.query == 'slide2')
+    {      
+      this.slides.slideTo(1,0);
+    }
+    if(this.query == 'slide3')
+    {     
+      this.slides.slideTo(2,0);
+    }
+  }
+  // showdata() function ends here !!!
+
+  slideChanged(){
+      if(this.slides._activeIndex == 0){
+          this.query = 'slide1';
+      }
+      if(this.slides._activeIndex == 1){
+          this.query = 'slide2';
+      }
+      if(this.slides._activeIndex == 2){
+          this.query = 'slide3';
+      }
+  } 
+
+
+}

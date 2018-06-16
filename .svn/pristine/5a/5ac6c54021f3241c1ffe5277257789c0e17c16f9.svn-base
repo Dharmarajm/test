@@ -1,0 +1,41 @@
+<ion-content class="ion-content">
+
+	<div class="images_logo">
+		<img src="assets/imgs/logo.png">
+	</div>
+	<form class="login-form">
+	  <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="text" id="email" ></ion-input>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label floating>Password</ion-label>
+	    <ion-input type="password"></ion-input>
+	  </ion-item>
+		<ion-item>
+		  <ion-label>Remember Me</ion-label>
+		  <ion-checkbox></ion-checkbox>
+		</ion-item>
+		<button ion-button block (click)="doLogin()">Login</button>
+
+	    <div class="forgot">
+	    	<button ion-button clear (click)="forgotpassword()">FORGOT PASSWORD?</button>
+	    </div>
+	    <div class="login-with">
+	    	<label>Login with</label>
+	    	<div class="social-login">
+				<button ion-button icon-only>
+					<i class="ti ti-facebook"></i>
+				</button>
+				<button ion-button icon-only>
+					<i class="ti ti-google"></i>
+				</button>
+	    	</div>
+	    </div>
+         <div class="register">
+			<h5>Not a Crooner yet? <a (click)="signup()">Sign up</a></h5>
+         </div>
+	</form>
+	
+</ion-content>

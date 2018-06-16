@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+      </button>      
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="subheader">
+    <h3>History<span>06 JUNE 2018 - 06 JUNE 2018</span></h3>
+    <ion-icon name="search"></ion-icon>
+  </div>
+  <div class="button-group">
+      <button ion-button color="dark-blue">Previous</button>
+      <button ion-button color="dark-blue">current</button>
+      <button ion-button color="dark-blue">Next</button>
+  </div>
+
+<!--   <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime> -->
+
+  <ion-toolbar class="segment">
+    <ion-segment [(ngModel)]="queryhistory">
+      <ion-segment-button value="music">
+        Music
+      </ion-segment-button>
+      <ion-segment-button value="sports">
+         Sports
+      </ion-segment-button>
+      <ion-segment-button value="dance">
+         Dance
+      </ion-segment-button>
+    </ion-segment> 
+  </ion-toolbar>
+
+<div [ngSwitch]="queryhistory"  >
+    <ion-list class="user_list" *ngSwitchCase="'music'" (swipe)="music_sports($event)"> 
+      <ion-item *ngFor="let user of musicjson">
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>{{user.name}}</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+        <button ion-button icon-only clear> <!-- (click)="view()" -->
+          <ion-icon name="md-star"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="user_list" *ngSwitchCase="'sports'" (swipe)="sports_dance($event)">
+      <ion-item *ngFor="let user of musicjson">
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>ABC sports</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+        <button ion-button icon-only clear> <!-- (click)="view()" -->
+          <ion-icon name="md-star"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>    
+
+    <ion-list class="user_list" *ngSwitchCase="'dance'" (swipe)="dance_sports($event)">
+      <ion-item *ngFor="let user of musicjson">
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>ABC dance</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+        <button ion-button icon-only clear > <!-- (click)="view()" -->
+          <ion-icon name="md-star"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+</div>
+</ion-content>

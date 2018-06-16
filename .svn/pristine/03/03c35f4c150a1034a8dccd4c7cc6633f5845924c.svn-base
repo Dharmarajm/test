@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>      
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ <div class="subheader">
+    <h3 id="history_dates" *ngIf="!toggled">History<span>{{start_date | date: 'dd-MMM-yyyy' }} - {{end_date | date: 'dd-MMM-yyyy'}}</span></h3>
+    <ion-icon id="history_search_button" name="search" *ngIf="!toggled"></ion-icon>
+  </div>  
+  <ion-searchbar id="history_search"
+     *ngIf="toggled"
+     [(ngModel)]="someValue"
+     (ionCancel)="cancelSearch($event)"
+     [showCancelButton]="true" #input>
+  </ion-searchbar>  
+  <div class="button-group" *ngIf="!toggled">
+      <button ion-button color="dark-blue" id="history_previous" (click)="previous('previous')" [ngStyle]="{'background-color': btnColor_pre,'color': colors_pre}">
+        <ion-icon name="ios-arrow-back" ></ion-icon>
+        Prev
+      </button>
+      <button ion-button color="dark-blue" id="history_current" (click)="current('current')" [ngStyle]="{'background-color': btnColor_current,'color': colors_current}">current</button>
+      <button ion-button color="dark-blue" id="history_next" [disabled]="!isenabled" (click)="next('next')" [ngStyle]="{'background-color': btnColor_next,'color': colors_next}">Next
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </button>
+  </div>
+
+
+ <ion-toolbar class="segment" *ngIf="!toggled">
+    <ion-segment [(ngModel)]="queryhistory">
+      <ion-segment-button value="music" id="history_music" (click)="type('Music')">
+        Music
+      </ion-segment-button>
+      <ion-segment-button value="sports" id="history_sports" (click)="type('Sports')">
+         Sports
+      </ion-segment-button>
+      <ion-segment-button value="dance" id="history_dances" (click)="type('Dance')">
+         Dance
+      </ion-segment-button>
+    </ion-segment> 
+  </ion-toolbar>
+
+<div [ngSwitch]="queryhistory">
+
+    <ion-list class="user_list" *ngSwitchCase="'music'" (swipe)="music_sports($event)" id="history_music_viewpage"> 
+
+      <div  *ngIf="history_music_Result == 0">
+        <h5 class="no_data">No records available</h5>
+      </div>
+
+      <div class="user_list" *ngFor="let his of history_music_values | homeSearch:someValue;let odd = odd;let i = index" >
+        <button ion-item (click)="openModal(his,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="his.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{his.user.image[0].image_path.url}}" *ngIf="his.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{his.title}} </h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{his.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{his.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action">
+          <ion-icon [name]="odd ? 'md-star' :'md-star-outline'" [color]="odd ? 'star' : 'noStar'"></ion-icon>
+        </button>
+      </div>
+      <!-- <div  *ngIf="(history_music_values | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+      </div> -->
+     </ion-list>
+
+    <ion-list class="user_list" *ngSwitchCase="'sports'" (swipe)="sports_dance($event)" id="history_sports_viewpage">
+
+      <div  *ngIf="history_music_Result == 0">
+        <h5 class="no_data">No records available</h5>
+      </div>
+
+      <div class="user_list" *ngFor="let his of history_music_values | homeSearch:someValue;let odd = odd;let i = index">
+        <button ion-item (click)="openModal(his,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="his.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{his.user.image[0].image_path.url}}" *ngIf="his.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{his.title}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{his.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{his.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action">
+          <ion-icon [name]="odd ? 'md-star' :'md-star-outline'" [color]="odd ? 'star' : 'noStar'"></ion-icon>
+        </button>
+      </div>
+     <!--  <div  *ngIf="(history_music_values | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+      </div> -->
+    </ion-list>    
+
+    <ion-list class="user_list" *ngSwitchCase="'dance'" (swipe)="dance_sports($event)" id="history_dances_viewpage">
+      
+      <div  *ngIf="history_music_Result == 0">
+        <h5 class="no_data">No records available</h5>
+      </div>
+
+      <div class="user_list" *ngFor="let his of history_music_values | homeSearch:someValue;let odd = odd;let i = index">
+        <button ion-item (click)="openModal(his,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="his.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{his.user.image[0].image_path.url}}" *ngIf="his.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{his.title}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{his.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{his.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action">
+          <ion-icon [name]="odd ? 'md-star' :'md-star-outline'" [color]="odd ? 'star' : 'noStar'"></ion-icon>
+        </button>
+      </div>
+      <!-- <div  *ngIf="(history_music_values | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+      </div> -->
+    </ion-list>
+</div>
+</ion-content>
+

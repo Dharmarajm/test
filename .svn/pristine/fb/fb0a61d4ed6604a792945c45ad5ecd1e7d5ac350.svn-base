@@ -1,0 +1,175 @@
+page-changepassword {
+	.images_header{
+		width: 20%;
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.bg{
+		background-color:#002b3d;
+	}
+	.icon_header{
+		color: white;
+        font-size: 25px;
+	}
+	.ion-content-profile {
+	    background: url("../assets/imgs/bg.jpg") no-repeat center center fixed; 	   
+     }
+     .input-group input{
+	    border: 1px solid #ababab;
+	    border-right: 1px solid #ababab;
+	    border-radius: 7px 0 0 7px;
+	    height: 40px;
+	    padding-left: 5px;
+	    width: 80%;
+	    font-size: 16px !important;
+	    color: white !important;
+	    font-weight: 500;
+	}
+	.input-group span{
+	    height: 40px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    width: 20%;
+	    border: 1px solid #ababab;
+	    border-left: 0px solid #ababab;
+	    border-radius: 0 7px 7px 0;
+	    color: white;
+	    background-color: #fff;
+	    font-weight: 500;
+	    font-size: 18px;
+	}
+	.input-group {
+	    display: flex;
+	    align-items: center;
+	    color:white;
+	}
+	.inputMaterial {
+	    width: 100%;
+	    border-bottom: 1px solid white!important;
+	}
+
+  	.groupText  {
+		  position:relative; 
+		  margin-bottom: 15px;
+		  margin-top: 10px; 
+		  margin-left: 10px;
+		  margin-right: 10px;
+		  
+		}
+
+		.groupButton  { 
+		  position:relative; 
+		  margin: 20px 0 15px;
+		  width:100%;
+		}
+
+		.group{ 
+		  position:relative; 
+		  margin-bottom: 35px; 
+		  margin-left: 30px;
+		  margin-right: 30px;
+		  /*border-bottom: 1px white solid;*/
+		}
+
+		.group_checkbox{ 
+		  position:relative; 
+		  margin-bottom: 35px; 
+		  margin-left: 30px;
+		  margin-right: 0px;
+		  color:white
+		}
+
+		
+
+		.group1 { 
+		  position:relative; 
+		  width:100%;
+		  padding: 0px 30px;
+		}
+
+		.inputMaterial        {
+		  font-size:18px;
+		  padding:10px 10px 10px 5px;
+		  display:block;
+		  width:300px;
+		  border:none;
+		  background: transparent;
+		  border-bottom: 1px solid white!important;
+		}
+		.inputMaterial:focus        {
+		  border-bottom:1px solid white!important;
+		}
+
+		.label {
+		  color:white; 
+		  font-size:14px;
+		  font-weight:normal;
+		  position:absolute;
+		  pointer-events:none;
+		  left:5px;
+		  top:10px;
+		  transition:0.2s ease all; 
+		  -moz-transition:0.2s ease all; 
+		  -webkit-transition:0.2s ease all;
+
+		}
+
+		/* active state */
+		.inputMaterial:focus ~ .label, .inputMaterial:valid ~ .label    {
+		  top:-20px;
+		  font-size:14px;
+		  color: white;
+		  background: transparent;
+
+		}
+
+		/* BOTTOM BARS ================================= */
+
+
+		/* active state */
+		.inputMaterial:focus ~ .bar:before, .inputMaterial:focus ~ .bar:after {
+		  width:50%;
+		    /*border-bottom:1px solid white;*/
+		}
+
+
+		/* active state */
+		.inputMaterial:focus ~ .highlight {
+		  -webkit-animation:inputHighlighter 0.3s ease;
+		  -moz-animation:inputHighlighter 0.3s ease;
+		  animation:inputHighlighter 0.3s ease;
+
+		}
+
+		/* ANIMATIONS ================ */
+
+
+		@media only screen and (max-width: 480px) {
+		    .companyname {
+		        font-size: 10px;
+		    }
+		}
+		.group input {
+		    width: 100%;
+		    color: white;
+		}
+		.button-blue-profile{
+			background-color: #075567;;
+			color: #fff;
+			border-radius: 10px;
+		}
+		.button-blue-profile:focus, .button-blue-profile:hover, .button-blue-profile:active,.button-blue-profile.activated
+		{
+		  background-color: #075567;
+		  color: #fff;
+		  border-radius: 10px;
+		}
+		.images_logo{
+	        display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 50%;
+	    }
+}

@@ -1,0 +1,122 @@
+<ion-header>  <!-- [scrollHide]="headerScrollConfig" [scrollContent]="pageContent" -->
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="subheader">
+    <h3>Top 10</h3>
+    <ion-icon name="search"></ion-icon><!-- (click)="toggle()" -->
+  </div> 
+  <!-- <ion-searchbar
+     *ngIf="toggled"
+     [(ngModel)]="someValue"
+     (ionCancel)="cancelSearch($event)"
+     [showCancelButton]="true" #input>
+  </ion-searchbar> -->
+  <!-- <button type="button" *ngIf="toggled" (click)="searchHome()">Ok</button> -->
+ <!--  <ion-searchbar
+     *ngIf="toggled"
+     [(ngModel)]="someValue"
+     (ionInput)="searchThis($event)"
+     (ionCancel)="cancelSearch($event)"
+     (ionClear) = "clearSearch($event)"
+     [showCancelButton]="true" #input>
+  </ion-searchbar> -->
+  <ion-toolbar class="segment">
+    <ion-segment [(ngModel)]="queryhome">
+      <ion-segment-button value="music" (click)="genreClick(1)">
+        Music
+      </ion-segment-button>
+      <ion-segment-button value="sports" (click)="genreClick(2)">
+         Sports
+      </ion-segment-button>
+      <ion-segment-button value="dance" (click)="genreClick(3)">
+         Dance
+      </ion-segment-button>
+    </ion-segment> 
+  </ion-toolbar>
+  <div [ngSwitch]="queryhome">
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)" [enabled]="enableRefresh">
+          <ion-refresher-content refreshingSpinner="circles"></ion-refresher-content>
+      </ion-refresher> -->
+    <ion-list *ngSwitchCase="'music'"  (swipe)="music_to_sports($event)">
+      <div class="user_list" *ngFor="let user of setGenre | homeSearch:someValue;let i = index">
+        <button ion-item (click)="openModal(user,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{user.title }}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action" (click)="openModal(user,i+1)">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </button>
+        
+      </div>
+      <div  *ngIf="(setGenre | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'sports'" (swipe)="sports_to_dance($event)"> 
+      <div class="user_list" *ngFor="let user of setGenre | homeSearch:someValue;let i = index">
+        <button ion-item (click)="openModal(user,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{user.title}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action" (click)="openModal(user,i+1)">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </button>
+       
+      </div>
+       <div  *ngIf="(setGenre | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+       </div>
+    </ion-list> 
+
+    <ion-list *ngSwitchCase="'dance'" (swipe)="dance_to_sports($event)">
+      <div class="user_list" *ngFor="let user of setGenre | homeSearch:someValue;let i = index">
+        <button ion-item (click)="openModal(user,i+1)">
+          <ion-avatar item-start>
+            <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image[0].image_path.url==null">
+            <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image[0].image_path.url!=null">
+          </ion-avatar>
+          <h2>{{user.title}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank {{i+1}}</span></p>
+        </button>
+        <button ion-button icon-only clear class="btn-action" (click)="openModal(user,i+1)">
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </button>
+      </div>
+      <div  *ngIf="(setGenre | homeSearch:someValue).length==0">
+        <h5 class="no_data">No search results found</h5>
+      </div>
+    </ion-list>
+
+    <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more data...">
+      </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+  </div>
+
+
+</ion-content>

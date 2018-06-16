@@ -1,0 +1,13 @@
+import { NgModule } from '@angular/core';
+import { IonicPageModule } from 'ionic-angular';
+import { DancePage } from './dance';
+
+@NgModule({
+  declarations: [
+    DancePage,
+  ],
+  imports: [
+    IonicPageModule.forChild(DancePage),
+  ],
+})
+export class DancePageModule {}

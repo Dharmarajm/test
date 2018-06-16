@@ -1,0 +1,47 @@
+<ion-header>
+   <ion-toolbar color="dark-blue">
+      <ion-searchbar
+      [(ngModel)]="someValue"
+      (ionCancel)="cancelSearch($event)"
+        [showCancelButton]="true" #input>
+      </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <div class="user_list">
+      <button ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>title</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>user.user.first_name</span><span><ion-icon name="ios-star-outline"></ion-icon>user.votes.length votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank i+1</span></p>
+      </button>
+    </div>
+    <div class="user_list">
+      <button ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>title</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>user.user.first_name</span><span><ion-icon name="ios-star-outline"></ion-icon>user.votes.length votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank i+1</span></p>
+      </button>
+    </div>
+    <div class="user_list">
+      <button ion-item>
+        <ion-avatar item-start>
+          <img src="assets/imgs/person.jpg">
+        </ion-avatar>
+        <h2>title</h2>
+        <p><span><ion-icon name="ios-person-outline"></ion-icon>user.user.first_name</span><span><ion-icon name="ios-star-outline"></ion-icon>user.votes.length votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank i+1</span></p>
+      </button>
+    </div>
+    <div>
+      <h5 class="no_data">No search results found</h5>
+    </div>
+    <div>
+      <h5 class="no_data">Find Your Needs.....</h5>
+    </div>
+  </ion-list>
+</ion-content>

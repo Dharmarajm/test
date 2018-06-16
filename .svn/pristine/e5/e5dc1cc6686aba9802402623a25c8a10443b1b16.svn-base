@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only  (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+      <div class="subheader">
+        <h3 *ngIf="!toggled">My Votes</h3>
+        <ion-icon id="myvotes_search_button" name="search" *ngIf="!toggled" (click)="toggle()"></ion-icon>
+      </div>
+      <ion-searchbar id="myvotes_search"
+         *ngIf="toggled"
+         [(ngModel)]="someValue"
+         (ionCancel)="cancelSearch($event)"
+         [showCancelButton]="true" #input>
+      </ion-searchbar>
+      <ion-list class="user_list" id="myvotes_details">
+        <div class="user_list" *ngFor="let user of votesdetails | homeSearch:someValue;let i = index">
+          <button ion-item (click)="openModal(user,i+1)">
+            <ion-avatar item-start>
+              <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image[0].image_path.url===null">
+              <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image[0].image_path.url!=null">
+            </ion-avatar>
+            <h2>{{user.title}}</h2>
+            <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+          </button>
+          <button ion-button icon-only clear class="btn-action" id="myvotes_share_button" (click)="regularShare(i)">
+            <ion-icon name="md-share"></ion-icon>
+          </button>
+        </div>
+        
+      </ion-list>
+</ion-content>

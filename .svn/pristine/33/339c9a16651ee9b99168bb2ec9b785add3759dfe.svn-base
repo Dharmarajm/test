@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { LoginPage } from './../login/login';
+
+
+@IonicPage()
+@Component({
+  selector: 'page-upload',
+  templateUrl: 'upload.html',
+})
+export class UploadPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad UploadPage');
+  }
+
+  new:any=true;
+
+   musicjson:any = [
+	    { name: 'Jilles', age: 21 },
+	    { name: 'Todd', age: 24 },
+	    { name: 'Lisa', age: 18 }
+	  ];
+
+    logout(){ 
+      this.navCtrl.setRoot(LoginPage);
+    }
+
+}

@@ -1,0 +1,88 @@
+import { Component} from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+
+/*import { ViewPage } from './../view/view';*/
+
+@IonicPage()
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public platform:Platform,public alertCtrl:AlertController) {
+   platform.registerBackButtonAction(() => {
+    let confirm = this.alertCtrl.create({
+      title: 'Croon',
+      message: 'Do you want to exit?',
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'OK',
+          handler: () => {
+          platform.exitApp();
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+          
+   });
+  }
+    musicjson:any = [
+	    { name: 'Jilles', age: 21 },
+	    { name: 'Todd', age: 24 },
+	    { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 },
+      { name: 'Jilles', age: 21 },
+      { name: 'Todd', age: 24 },
+      { name: 'Lisa', age: 18 }
+	];
+
+
+    ionViewDidLoad() {}
+
+	
+	 public queryhome : string = 'music';
+
+
+	view(){
+		this.navCtrl.setRoot('ViewPage');
+	}
+
+
+	  music_to_sports(e){
+	     if (e.direction == 2) {
+	      this.queryhome = 'sports';     
+	    }
+	  }
+
+	  sports_to_dance(e){
+	    if (e.direction == 2) {
+	      this.queryhome = 'dance';
+	    }
+	    if (e.direction == 4) {
+	      this.queryhome = 'music';
+	    }
+	  }
+
+	  dance_to_sports(e){
+	    if (e.direction == 4) {
+	      this.queryhome = 'sports';
+	    }
+	  }
+
+
+}
+
+
+
+

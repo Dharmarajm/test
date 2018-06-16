@@ -1,0 +1,30 @@
+<ion-menu [content]="content" >
+  <ion-header>
+    <ion-toolbar color="dark-blue">
+      <ion-title>CROON</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  <ion-content style="background-color: #002b3d;">
+    <ion-list>
+      <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)" color="dark-blue">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{ p.title }} 
+        </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+ 
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<style type="text/css">
+  .md .menu-inner{
+    background: #002b3d;
+  }
+  .list-md .item-block .item-inner{
+    border-bottom:0 !important;
+  }
+  .list-md .item-block{
+    border-bottom:0.5px solid  #ddd;
+  }
+</style>

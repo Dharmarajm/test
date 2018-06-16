@@ -1,0 +1,23 @@
+<ion-content class="ion-content">
+  <div class="header">
+    <span>
+      <button ion-button icon-only clear (click)="back()">
+       <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <h4>Forgot Password</h4>
+    </span>
+    <img src="assets/imgs/logo.png">
+  </div>
+<!--   <div class="images_logo">
+    <img src="assets/imgs/logo.png">
+  </div> -->
+
+  <form class="login-form">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" id="forgot_email" ></ion-input>
+    </ion-item>   
+    <br>
+    <button ion-button block id="forgot_save_button" (click)="goto_login()"> NEXT</button>
+</form>
+</ion-content>

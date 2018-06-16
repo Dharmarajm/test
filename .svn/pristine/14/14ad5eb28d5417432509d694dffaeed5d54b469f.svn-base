@@ -1,0 +1,21 @@
+<ion-header class="bg"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+        <ion-icon menuToggle class="icon_header" name="menu"></ion-icon>
+      </ion-col>
+      <ion-col col-9>
+        <img src="assets/imgs/logo.png" class="images_header">
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon_header" name="notifications-outline"></ion-icon>
+      </ion-col>
+      <ion-col col-1>
+        <ion-icon class="icon_header" name="power" ></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+<ion-content padding>
+
+</ion-content>

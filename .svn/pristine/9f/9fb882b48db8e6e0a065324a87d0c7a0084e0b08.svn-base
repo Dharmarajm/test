@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>     
+    </span>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ol type="1">
+    <li>
+      Croon is a weekly competition app where people can upload or record audio or video clips (up to 1 minute in length) of themselves singing, dancing, playing sports, playing video games, etc.  The competitions are judged by other users (the voters).  Contestants have up to a specified time every week to upload or record their audio/video clips.  Then the voters get to vote on their favorite performer(s) up to a specified time.  We tally the winners and announce the results at the end of the week.  
+    </li>
+    <li>
+      Contestants can compete as many times as they want.  The app also allows contestants to ping their friends to encourage them to come and vote for them.  
+    </li>
+    <li>
+      Voters can vote as many times as they wish (but not for the same video/audio clip more than once per week).
+    </li>
+    <li>
+      The app will send a daily update with a running tally of the vote count to all contestants and voters. 
+    </li>
+    <li>
+      Croon will maintain a list of previous winners so that you can go back and re-experience your past favorites.
+    </li>
+  </ol>  
+   [NOTE:  Include a ‘Feedback’ link in this page for users to send their comment]
+
+</ion-content>

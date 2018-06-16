@@ -1,0 +1,53 @@
+<ion-content class="ion-content" >
+
+	<div>
+		<img src="assets/imgs/logo.png" class="images_logo">
+	</div>
+	<form>
+		<br>
+		<br>
+		
+		<div class="group">
+	        <input class="inputMaterial lower" id="email" type="text"  ng-model="user.email" required>
+	        <span class="highlight"></span>
+	        <div class="label">Email&nbsp;id</div>
+	    </div>
+
+	    <div class="group">
+	        <input class="inputMaterial" id="password" type="password"  ng-model="user.password" required>
+	        <span class="highlight"></span>
+	        <div class="label">Password</div>
+	    </div>
+	       
+		<div class="group_checkbox">
+			<input type="checkbox">&nbsp;&nbsp;Remember Me
+		</div>
+
+        <div class="group1">       
+	        <button ion-button block class="button-blue" (click)="doLogin()" > LOGIN
+	        </button>
+	    </div>
+
+	    <h6 class="forgot">FORGOT PASSWORD?</h6> 
+
+	   
+	    <div class="line"></div>
+
+	    <h6 class="forgot">Login with</h6> 
+
+        <!-- <div class="row">
+            <div class="col col-30"></div>
+	      	<div class="col col-20">
+	            <ion-icon name="logo-facebook"></ion-icon>
+	      	</div>
+	      	<div class="col col-20">
+	      		<ion-icon name="logo-google"></ion-icon>
+	      	</div>      
+	      	<div class="col col-30"></div>
+        </div> -->
+        <br>
+        <br>
+         <h5 class="forgot">Not a Crooner yet? <a style="color: #fcc52a" >Sign up</a></h5> 
+	</form>
+	
+</ion-content>

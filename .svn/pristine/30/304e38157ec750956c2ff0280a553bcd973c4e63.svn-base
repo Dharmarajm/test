@@ -1,0 +1,203 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+      </button>
+      <button ion-button icon-only clear (click)="logout()">
+        <ion-icon name="ios-power"></ion-icon>
+      </button>
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="subheader">
+    <h3>Upload</h3>
+    <ion-icon name="search"></ion-icon>
+  </div>
+  <ion-toolbar class="segment">
+    <ion-segment [(ngModel)]="query" (ionChange)="showdata()">
+      <ion-segment-button value="slide1">
+        New
+      </ion-segment-button>
+      <ion-segment-button value="slide2">
+         My Upload<span>20</span>
+      </ion-segment-button>
+    </ion-segment> 
+  </ion-toolbar>
+  <ion-slides (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <div class="new-up">
+        <div class="button_group">
+          <div class="btn-label">
+            <button ion-button icon-only>
+              <ion-icon name="mic"></ion-icon>
+            </button>
+            <p>Record</p>
+          </div>
+          <div class="btn-label">
+            <button ion-button icon-only>
+              <ion-icon name="videocam"></ion-icon>
+            </button>
+            <p>Record</p>
+          </div>
+          <div class="btn-label">
+            <button ion-button icon-only>
+              <ion-icon name="folder"></ion-icon>
+            </button>
+            <p>Upload</p>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Title</label>
+          <input type="text" name="">
+        </div>
+        <div class="input-group">
+          <label>Genre</label>
+          <div class="input-radio">
+            <ion-grid>
+              <ion-row class="tabs">          
+                <ion-col>
+                  <label><input type="radio" name="genre">Music</label>
+                </ion-col>
+                <ion-col>
+                  <label><input type="radio" name="genre">Sports</label>
+                </ion-col>
+                <ion-col>
+                   <label><input type="radio" name="genre">Video</label>
+                </ion-col>
+                <ion-col>
+                   <label><input type="radio" name="genre">Video Game</label>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+        <div class="input-group">
+          <label>Select Languages</label>
+          <button ion-button block color="light" ng-click="Languages()" id="languages">
+            Languages
+          </button>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </div>
+        <div class="input-group">
+          <label>Description</label>
+          <textarea class="upload_textarea"></textarea>
+        </div>
+        <button ion-button block class="button-blue-upload"> UPLOAD</button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <ion-list class="user_list">
+        <ion-item *ngFor="let user of musicjson">
+          <ion-avatar item-start>
+            <img src="assets/imgs/person.jpg">
+          </ion-avatar>
+          <h2>{{user.name}}</h2>
+          <p><span><ion-icon name="ios-person-outline"></ion-icon>James</span><span><ion-icon name="ios-star-outline"></ion-icon>274 votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+          <button ion-button icon-only clear (click)="view()">
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<!--   <h4 class="upload_title">Upload</h4>
+
+  <div class="row tabs">
+    <button ion-button color="light" class="btn_tab" (click)="new= true;myupload= false;">NEW</button>
+    <button ion-button color="light" class="btn_tab" (click)="new= false;myupload= true;">MY UPLOAD</button>
+  </div>
+
+  <div *ngIf="new">
+    <ion-grid>
+        <ion-row class="tabs">          
+          <ion-col>
+            <ion-icon class="icon_upload" name="mic"></ion-icon>
+          </ion-col>
+          <ion-col>
+              <ion-icon class="icon_upload" name="videocam"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon class="icon_upload" name="folder"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="tabs">          
+          <ion-col>
+            Record
+          </ion-col>
+          <ion-col>
+              Record
+          </ion-col>
+          <ion-col>
+            upload
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <h6 class="sub_content">Genre</h6>
+
+    <ion-grid>
+      <ion-row class="tabs">          
+        <ion-col>
+          <input type="radio" name="Music">Music
+        </ion-col>
+        <ion-col>
+          <input type="radio" name="Sports">Sports
+        </ion-col>
+        <ion-col>
+           <input type="radio" name="Video">Video
+        </ion-col>
+        <ion-col>
+           <input type="radio" name="VideoGame">Video Game
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div class="groupButton">
+      <button ion-button color="light" ng-click="Languages()" id="languages" class="btn_languages">
+        Select Languages&nbsp;&nbsp;&nbsp;<ion-icon name="arrow-dropright" class="group-icon_right"></ion-icon>
+      </button>
+    </div>
+
+    <h6 class="sub_content">Description</h6>
+    <textarea class="upload_textarea">
+      
+    </textarea>
+
+    <div class="group1">       
+          <button ion-button block class="button-blue-upload"> UPLOAD</button>
+    </div>
+  </div>
+
+  <div *ngIf="myupload">
+      <ion-grid>
+        <ion-row *ngFor="let user of musicjson">
+          <ion-col>
+             <img src="assets/imgs/person.jpg" class="images">
+          </ion-col>
+          <ion-col col-9 >
+              <a class="name">{{user.name}}</a><br><ion-icon class="ionc_color" name="person"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Altius</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="star"></ion-icon>&nbsp;&nbsp;<a class="sub_name">213 Votes</a>&nbsp;&nbsp;<ion-icon class="ionc_color" name="trophy"></ion-icon>&nbsp;&nbsp;<a class="sub_name">Rank 1</a>
+          </ion-col>
+          <ion-col>
+            <br><ion-icon class="vote_icon" name="share"></ion-icon>
+          </ion-col>
+        </ion-row>
+    </ion-grid> 
+  </div> -->
+
+
+
+

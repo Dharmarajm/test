@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-toolbar color="dark-blue">
+    <span>
+      <button menuToggle ion-button icon-only clear>
+        <ion-icon name="md-menu"></ion-icon>
+      </button>
+    </span>
+    <img src="assets/imgs/header-logo.png">
+    <span>
+      <button ion-button icon-only (click)="notification()" clear>
+        <ion-icon name="ios-notifications-outline"></ion-icon>
+        <span class="notify">06</span>
+      </button>      
+    </span>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  
+      <div *ngIf="user_id == null">
+          <h5 class="no_data">Create your Croon Account</h5>
+          <button ion-button color="dark-blue" style="margin-left: 120px;" (click)="goto_login()">Login</button>
+      </div>
+
+      <div *ngIf="user_id > 0">
+
+          <div class="subheader">
+            <h3 *ngIf="!toggled">Upload</h3>
+            <ion-icon id="upload_search_button" name="search" *ngIf="!toggled && queryupload == 'myupload'"></ion-icon>
+          </div>
+
+      
+        <ion-searchbar id="upload_search"
+           *ngIf="toggled"
+           [(ngModel)]="someValue"
+           (ionCancel)="cancelSearch($event)"
+           [showCancelButton]="true" #input>
+        </ion-searchbar>
+        <ion-toolbar class="segment" *ngIf="!toggled">
+          <ion-segment [(ngModel)]="queryupload">
+            <ion-segment-button value="new" (click)="segmentClick('new')" id="upload_new">
+              New
+            </ion-segment-button>
+            <ion-segment-button value="myupload" (click)="segmentClick('myupload')" id="upload_myupload">
+               My Upload<span>20</span>
+            </ion-segment-button>
+          </ion-segment> 
+        </ion-toolbar>
+        <div [ngSwitch]="queryupload">
+
+            <div class="new-up" *ngSwitchCase="'new'" (swipe)="new_to_myupload($event)">
+              <div class="button_group">
+                <div class="btn-label" id="upload_record">
+                  <button ion-button icon-only (click)="Audio()">
+                    <ion-icon name="mic"></ion-icon>
+                  </button>
+                  <p>Record</p>
+                </div>
+                <div class="btn-label" id="upload_video">
+                  <button ion-button icon-only (click)="Video()">
+                    <ion-icon name="videocam"></ion-icon>
+                  </button>
+                  <p>Record</p>
+                </div>
+                <div class="btn-label" id="upload_file_uplaod">
+                  <button ion-button icon-only (click)="Upload()">
+                    <ion-icon name="folder"></ion-icon>
+                  </button>
+                  <p>Upload</p>
+                </div>
+              </div>
+              <div class="input-group" id="upload_title">
+                <label>Title</label>
+                <input type="text" name="">
+              </div>
+              <div class="input-group">
+                <label>Genre</label>
+                <div class="input-radio">
+                  <ion-grid>
+                    <ion-row class="tabs">          
+                      <ion-col col-4>
+                        <label><input type="radio" name="genre" id="upload_music">Music</label>
+                      </ion-col>
+                      <ion-col col-4>
+                        <label><input type="radio" name="genre" id="upload_sports">Sports</label>
+                      </ion-col>
+                      <ion-col col-4>
+                         <label><input type="radio" name="genre" id="upload_video">Video</label>
+                      </ion-col>
+                      <ion-col col-5>
+                         <label><input type="radio" name="genre" id="upload_video_game">Video Game</label>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </div>
+              </div>
+              <div class="input-group">
+                <label>Select Languages</label>
+                <button ion-button block color="light" ng-click="Languages()" id="upload_languages">
+                  Languages
+                </button>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </div>
+              <div class="input-group">
+                <label>Description</label>
+                <textarea class="upload_textarea" id="upload_description"></textarea>
+              </div>
+              <button ion-button block class="button-blue-upload" id="upload_save_button"> UPLOAD</button>
+            </div>
+
+            <ion-list *ngSwitchCase="'myupload'" (swipe)="myupload_to_new($event)">
+              <div class="user_list" *ngFor="let user of uploaddeatils | homeSearch:someValue;let i = index" id="upload_details">
+                <button ion-item (click)="openModal(user,i+1)">
+                  <ion-avatar item-start>
+                    <img src="assets/imgs/contactIcon.png" *ngIf="user.user.image[0].image_path.url==null">
+                    <img src="{{global.imageUrl}}{{user.user.image[0].image_path.url}}" *ngIf="user.user.image[0].image_path.url!=null">
+                  </ion-avatar>
+                  <h2>{{user.title}}</h2>
+                  <p><span><ion-icon name="ios-person-outline"></ion-icon>{{user.user.first_name}}</span><span><ion-icon name="ios-star-outline"></ion-icon>{{user.votes.length}} votes</span><span><ion-icon name="ios-trophy-outline"></ion-icon>Rank1</span></p>
+                </button>
+                <button ion-button icon-only clear class="btn-action" id="upload_share_button" (click)="regularShare(i)">
+                  <ion-icon name="md-share"></ion-icon>
+                </button>
+              </div>
+              <div  *ngIf="(uploaddeatils | homeSearch:someValue).length==0">
+                <h5 class="no_data">No search results found</h5>
+              </div>
+            </ion-list>
+        </div>
+  </div>
+</ion-content>
+
+
+
+
+

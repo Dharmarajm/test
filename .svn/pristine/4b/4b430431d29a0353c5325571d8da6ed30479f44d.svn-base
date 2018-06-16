@@ -1,0 +1,15 @@
+<ion-content class="ion-content">
+
+  <div class="images_logo">
+    <img src="assets/imgs/logo.png">
+  </div>
+
+  <form class="login-form">
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="text" id="email" ></ion-input>
+    </ion-item>   
+    <br>
+    <button ion-button block (click)="goto_login()"> NEXT</button>
+</form>
+</ion-content>

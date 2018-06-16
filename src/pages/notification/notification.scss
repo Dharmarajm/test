@@ -1,0 +1,14 @@
+page-notification {
+	.list-ios .item-block .item-inner, .list-md .item-block .item-inner {
+	    border-bottom: 0.55px solid #d2d2d2;
+	}
+	.list-ios .item-block, .list-ios .item-wrapper .item-block, .list-md .item-block, .list-md .item-wrapper .item-block {
+	    border-bottom: 0px solid #d2d2d2;
+	}
+	.list-ios .item-ios h2, .list-md .item-md h2{
+		font-size: 1.4rem;
+	}
+	.list-ios .item-ios p, .list-md .item-md p{
+		font-size: 1rem;
+	}
+}

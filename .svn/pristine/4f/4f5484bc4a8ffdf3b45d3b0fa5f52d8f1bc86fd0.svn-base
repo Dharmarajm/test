@@ -1,0 +1,98 @@
+page-upload {
+	.images_header{
+		width: 20%;
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.bg{
+		background-color:#002b3d;
+	}
+	.icon_header{
+		color: white;
+        font-size: 25px;
+	}
+	.upload_title{
+		text-align:center;
+		color:grey;
+	}
+	.tabs{
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	}
+	.btn_tab{
+		color:#002b3d;
+		font-style:bold;
+		border-radius:0px;
+		border:none;
+		box-shadow: 0px 0px;
+		background-color: white;
+	}
+	.btn_tab:focus, .btn_tab:hover, .btn_tab:active,.btn_tab.activated
+	{
+	  color: #002b3d;
+	  border-bottom: 2px solid #fcc52a !important;
+	  border-radius:0px;
+	  background-color: white;
+	}
+	.icon_upload{
+		color:#fcc52a;
+		background-color:#002b3d;
+		padding: 10px;
+		border-radius: 25px;
+		margin:10px;
+	}
+	.sub_content{
+		margin-left:20px;
+		color:grey;
+	}
+
+	.groupButton  { 
+	  position:relative; 
+	  width:100%;
+	}
+	.group-icon_right{
+	  float: right;
+	  color: #f3777a;
+	  font-size:20px;
+	}
+	.btn_languages{
+		width:100%;
+	}
+	.upload_textarea{
+		margin-left: 20px;
+		border: none;
+		width: 100%;
+	}
+	.images{
+		width: 100%;
+	    border-radius:50px;
+	    height:100%;
+	}
+	.sub_name{
+		color:grey;
+		font-size: 13px;
+	}
+	.name{
+		font-weight:bold;
+		color:black;
+	}
+	.button-blue-upload{
+		background-color: #fcc52a;;
+		color: #002b3d;
+		border-radius: 10px;
+	}
+	.button-blue-upload:focus, .button-blue-upload:hover, .button-blue-upload:active,.button-blue-upload.activated
+	{
+	  background-color: #fcc52a;
+	  color: #002b3d;
+	  border-radius: 10px;
+	}
+	.group1 { 
+		  position:relative; 
+		  width:100%;
+		  padding: 0px 30px;
+		}
+}
